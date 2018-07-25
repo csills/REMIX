@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import axios from 'axios';
+//import axios from 'axios';
 import './App.css';
+import Gallery from './Gallery';
+import './Gallery.css';
 
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      remix: "Remix yo' Pics"
+      collab: "Where Creative's Collaborate"
     }
   }
 
@@ -19,15 +21,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">PIC REMIX</h1>
+          <h1 className="App-title">Collaborative REMIX</h1>
         </header>
         <p className="App-intro">
-          A place to re-create your photos.
+          A space to create and re-create.
         </p>
-        <h1>{this.state.remix}</h1>
-        <button>Upload</button>
-        <button>Download</button>
+        <h1>{this.state.collab}</h1>
+        <Gallery />
       </div>
+      
     );
   }
 }
