@@ -21,12 +21,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Collaborative REMIX</h1>
+          <h1 className="App-title">REMIX</h1>
         </header>
+        <h1>{this.state.collab}</h1>
         <p className="App-intro">
           A space to create and re-create.
         </p>
-        <h1>{this.state.collab}</h1>
         <Gallery />
       </div>
       

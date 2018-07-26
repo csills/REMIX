@@ -42,11 +42,11 @@ body {
   transition: all .25s ease-in-out;
   
   /*
-  &:focus,
-  &:hover {
+  focus  hover {
     color: #111;
   }
   */
+  
 }
 
 .gallery-thumbnail:focus ~ .card-icon-open,
