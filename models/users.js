@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     lastname: DataTypes.STRING,
     username: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    github_id: DataTypes.STRING
+    password: DataTypes.STRING
   }, {});
   Users.associate = function(models) {
     // associations can be defined here
-   // User.hasMany(models.Remixes);
+   Users.hasMany(models.Gallery);
+   Users.hasMany(models.Remixes);
   };
   return Users;
 };
