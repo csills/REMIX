@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 //import Axios from 'axios';
 //import { Link, Route } from 'react-router-dom';
 import './App.css';
-import './Remix-Logo.png'
 import Gallery from './Gallery';
 import './Gallery.css';
+import './Remix-Logo.png';
 
 
 class App extends Component {
