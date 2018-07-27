@@ -6,6 +6,7 @@ import './Gallery.css';
 
 // Create new array with URLs for images
 let imgUrls = [
+  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg',
   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
   'https://source.unsplash.com/01vFmYAOqQ0/800x600',
   'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
@@ -22,10 +23,15 @@ let imgUrls = [
 
 // Component for gallery images
 class GalleryImages extends Component {
+
+  imageClick = () => {
+    console.log('Image was Clicked!!!!');
+  }
+
   render() {
     return(
-      <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
-    )
+      <img className={this.props.className} src={this.props.src} alt={this.props.alt} onClick={this.imageClick} />
+    );
   }
 }
 
