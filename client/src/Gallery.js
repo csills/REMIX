@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Gallery.css';
 
 // Cache gallery container
 //const galleryContainer = document.querySelector('.photo-gallery');
@@ -28,7 +29,7 @@ class GalleryImage extends Component {
   }
 }
 
-// Component for gallery modal
+//Component for gallery modal
 class GalleryModal extends Component {
   render() {
     if (this.props.isOpen === false) {
@@ -47,7 +48,6 @@ class GalleryModal extends Component {
   }
 }
 
-
 // Component for gallery
 class Gallery extends Component{
   constructor(props) {
@@ -62,6 +62,7 @@ class Gallery extends Component{
     
     this.closeModal = this.closeModal.bind(this);
   }
+  
   
   render() {
     return(
@@ -85,6 +86,7 @@ class Gallery extends Component{
     )
   }
   
+  
   // Function for opening modal dialog
   openModal(url, e) {
      this.setState({
@@ -101,5 +103,6 @@ class Gallery extends Component{
     })
   }
 }
+
 
 export default Gallery;

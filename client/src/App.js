@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-//import axios from 'axios';
+//import Axios from 'axios';
+//import { Link, Route } from 'react-router-dom';
 import './App.css';
+import './Remix-Logo.png'
 import Gallery from './Gallery';
 import './Gallery.css';
 
@@ -10,7 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      collab: "Where Creative's Collaborate"
+      collab: "A space to create and re-create."
     }
   }
 
@@ -20,12 +21,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">REMIX</h1>
+          <img src="Remix-Logo.png" className="App-logo" alt="logo" />
         </header>
-        <h1>{this.state.collab}</h1>
+        <h2>{this.state.collab}</h2>
         <p className="App-intro">
-          A space to create and re-create.
+         "Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product."
         </p>
         <Gallery />
       </div>
