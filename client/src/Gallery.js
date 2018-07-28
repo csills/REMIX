@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Gallery.css';
-import RemixGallery from './RemixGallery';
+import UserRemixGallery from './UserRemixGallery';
 
 // Cache gallery container
 //const galleryContainer = document.querySelector('.react-gallery');
