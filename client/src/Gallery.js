@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Gallery.css';
+import RemixGallery from './RemixGallery';
 
 // Cache gallery container
 //const galleryContainer = document.querySelector('.react-gallery');
@@ -26,6 +27,7 @@ class GalleryImages extends Component {
 
   imageClick = () => {
     console.log('Image was Clicked!!!!');
+    
   }
 
   render() {
