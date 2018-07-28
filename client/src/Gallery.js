@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './Gallery.css';
-import UserRemixGallery from './UserRemixGallery';
+import ImageRemixHistory from './ImageRemixHistory';
 
 // Cache gallery container
 //const galleryContainer = document.querySelector('.react-gallery');
 
 // Create new array with URLs for images
 let imgUrls = [
-  'https://upload.wikimedia.org/wikipedia/commons/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg',
   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
   'https://source.unsplash.com/01vFmYAOqQ0/800x600',
   'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
@@ -27,7 +27,9 @@ class GalleryImages extends Component {
 
   imageClick = () => {
     console.log('Image was Clicked!!!!');
-    
+    //Open new page with clicked Gallery Image, upload/download buttons,
+    //and images of all Remixes made of that original Gallery image
+    //use a route here to ImageRemixHistory.js???
   }
 
   render() {
