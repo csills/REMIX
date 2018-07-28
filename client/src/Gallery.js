@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import './Gallery.css';
+import ImageRemixHistory from './ImageRemixHistory';
 
 // Cache gallery container
-//const galleryContainer = document.querySelector('.photo-gallery');
+//const galleryContainer = document.querySelector('.react-gallery');
 
 // Create new array with URLs for images
 let imgUrls = [
@@ -19,87 +22,63 @@ let imgUrls = [
   'https://source.unsplash.com/vZlTg_McCDo/800x600'
 ];
 
-// Component for gallery image
-class GalleryImage extends Component {
-  render() {
-    return(
-      <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
-    )
-  }
-}
+// Component for gallery images
+class GalleryImages extends Component {
 
-// Component for gallery modal
-class GalleryModal extends Component {
+  imageClick = () => {
+    console.log('Image was Clicked!!!!');
+    //Open new page with clicked Gallery Image, upload/download buttons,
+    //and images of all Remixes made of that original Gallery image
+    //use a route here to ImageRemixHistory.js???
+  }
+
   render() {
-    if (this.props.isOpen === false) {
-      return null;
-    }
-    
     return(
-      <div isOpen={this.props.isOpen} className='modal-overlay' onClick={this.props.onClick} name={this.props.name}>
-        <div className='modal-body'>
-          <a className='modal-close' href='https://source.unsplash.com/vZlTg_McCDo/800x600' onClick={this.props.onClick}><span className='fa fa-times'></span></a>
-          
-          <img src={this.props.src} alt='gallery' />
-        </div>
-      </div>
-    )
+      <img className={this.props.className} src={this.props.src} alt={this.props.alt} onClick={this.imageClick} />
+    );
   }
 }
 
 
 // Component for gallery
 class Gallery extends Component{
+  // Is this constructor necessary?
   constructor(props) {
     super(props);
     
     this.state = {
-      showModal: false,
+      remixTagLine: "A space to create and re-create.",
       url: ''
     }
     
-    this.openModal = this.openModal.bind(this);
-    
-    this.closeModal = this.closeModal.bind(this);
   }
   
   render() {
     return(
-      <div refs='gallery-container' className='container-fluid gallery-container'>
-        <div className='row'>
-          {
-            imgUrls.map((url, index) => {
-               return <div className='col-sm-6 col-md-3 col-xl-2'>
-                  <div className='gallery-card'>
-                    <GalleryImage className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
-                    
-                    <span className='card-icon-open fa fa-expand' value={url} onClick={(e) => this.openModal(url, e)}></span>
-                  </div>
-                </div>
-             })
-           }
+      <div>
+        <div>
+          <h2>{this.state.remixTagLine}</h2>
+          <p className="App-intro">
+          "Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product."
+          </p>
         </div>
-        
-        <GalleryModal isOpen={this.state.showModal} onClick={this.closeModal} src={this.state.url} /> 
+        <div refs='gallery-container' className='container-fluid gallery-container'>
+          <div className='row'>
+            {
+              imgUrls.map((url, index) => {
+                return <div className='col-sm-6 col-md-3 col-xl-2'>
+                    <div className='gallery-card'>
+                      <GalleryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />  
+                    </div>
+                  </div>
+              })
+            }
+          </div>
+        </div>
       </div>
     )
   }
-  
-  // Function for opening modal dialog
-  openModal(url, e) {
-     this.setState({
-       showModal: true,
-       url: url
-     })
-   };
 
-  // Function for closing modal dialog
-  closeModal() {
-    this.setState({
-      showModal: false,
-      url: ''
-    })
-  }
 }
 
 export default Gallery;

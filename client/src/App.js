@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-//import axios from 'axios';
+//import Axios from 'axios'; ???
 import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
+import remixLogo from './Remix-Logo.png';
 import Gallery from './Gallery';
 import './Gallery.css';
+import UserRemixGallery from './UserRemixGallery';
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      collab: "Where Creative's Collaborate"
-    }
-  }
-
-
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">REMIX</h1>
+          <img src={remixLogo} className="App-logo" alt="logo" />
+          <div className="navbar">
+              <Link to="/">Gallery</Link>
+              <Link to="/UserRemixGallery">Remixes</Link>
+
+              <Switch>
+                <Route exact path="/Gallery" component={Gallery} />
+                <Route exact path="/UserRemixGallery" component={UserRemixGallery} />
+              </Switch>
+          </div>
         </header>
-        <h1>{this.state.collab}</h1>
-        <p className="App-intro">
-          A space to create and re-create.
-        </p>
-        <Gallery />
+        <div>
+         
+          <Gallery />
+        </div>
       </div>
-      
     );
   }
 }
