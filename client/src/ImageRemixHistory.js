@@ -1,21 +1,40 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import downloadimage from './one.jpg'
 
 //This is where a User can see all images they have Remixed
 class ImageRemixHistory extends Component {
     render() {
         return  (
-        <div>
-            <h1>Checkout this Images Remix History</h1>
-            {<Link to="/Gallery">take me back to the main gallery plz</Link> }
-            <img src='http://civitasinc.com/2013/wp-content/uploads/2013/08/image-coming-soon.jpg' alt='Coming Soon'/>
-            {/* This is where the single image clicked in Gallery will appear 
-                along with Upload/Download buttons
-                followed by smaller sized images of all the Remixes related to 
-                that original Gallery Image
-            
-            */}
-        </div>
+            <div>
+                {<Link to="/Gallery">Main Gallery</Link> }
+                
+                <div refs='gallery-container' className='container-fluid gallery-container'>
+                    <div className='row'>
+                        <div className='imageDownloadBox'>
+                            <img src= {downloadimage} alt={this.props.alt} />
+                            <a href={downloadimage} download>
+                            <br/>
+                            <br/>
+                            <button>Download This Photo</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* This is where all the remixes submitted for an 
+                        Indiviual image will appear: */}
+                    <h1>Checkout this Images Remix History</h1>
+                    <div refs='remix-gallery-container' className='container-fluid gallery-container'>
+                        <div className='row'>
+                            <div className='col-sm-6 col-md-3 col-xl-2'>
+                                <div className='gallery-card'>
+                                     {/*Remix Images Go Here*/} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }

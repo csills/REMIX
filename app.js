@@ -1,12 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var remix = require('./routes/remix');
+const gallery = require('./routes/gallery');
+const remix = require('./routes/remix');
 
-var app = express();
+const app = express();
 
 
 app.use(logger('dev'));
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+app.use('/gallery', gallery);
 app.use('/remix', remix);
 
 // catch 404 and forward to error handler
