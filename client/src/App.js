@@ -29,6 +29,7 @@ class App extends Component {
                 <Route exact path="/UserRemixGallery" component={UserRemixGallery} />
                 <Route exact path="/Loginregisterpage" component={Loginregisterpage} />
                 <Route exact path="/Sendemail" component={Sendemail} />
+                <Route exact path="/" component={Gallery} />
               </Switch>
           </div>
           {/* <div refs='gallery-container' className='container-fluid gallery-container'>
