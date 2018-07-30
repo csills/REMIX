@@ -2,36 +2,38 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import './Gallery.css';
 import ImageRemixHistory from './ImageRemixHistory';
+import downloadimage from './one.jpg'
 
 // Cache gallery container
 //const galleryContainer = document.querySelector('.react-gallery');
 
 // Create new array with URLs for images
-let imgUrls = [
-  'https://source.unsplash.com/3Z70SDuYs5g/800x600',
-  'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-  'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
-  'https://source.unsplash.com/t20pc32VbrU/800x600',
-  'https://source.unsplash.com/pHANr-CpbYM/800x600',
-  'https://source.unsplash.com/3PmwYw2uErY/800x600',
-  'https://source.unsplash.com/uOi3lg8fGl4/800x600',
-  'https://source.unsplash.com/CwkiN6_qpDI/800x600',
-  'https://source.unsplash.com/9O1oQ9SzQZQ/800x600',
-  'https://source.unsplash.com/E4944K_4SvI/800x600',
-  'https://source.unsplash.com/-hI5dX2ObAs/800x600',
-  'https://source.unsplash.com/vZlTg_McCDo/800x600'
-];
+// let imgUrls = [
+//   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
+//   'https://source.unsplash.com/01vFmYAOqQ0/800x600',
+//   'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
+//   'https://source.unsplash.com/t20pc32VbrU/800x600',
+//   'https://source.unsplash.com/pHANr-CpbYM/800x600',
+//   'https://source.unsplash.com/3PmwYw2uErY/800x600',
+//   'https://source.unsplash.com/uOi3lg8fGl4/800x600',
+//   'https://source.unsplash.com/CwkiN6_qpDI/800x600',
+//   'https://source.unsplash.com/9O1oQ9SzQZQ/800x600',
+//   'https://source.unsplash.com/E4944K_4SvI/800x600',
+//   'https://source.unsplash.com/-hI5dX2ObAs/800x600',
+//   'https://source.unsplash.com/vZlTg_McCDo/800x600'
+// ];
 
 // Component for gallery images
-class GalleryImages extends Component {
+// class GalleryImages extends Component {
 
-  imageClick = () => {
-    console.log('Image was Clicked!!!!');
-    //Open new page with clicked Gallery Image, upload/download buttons,
-    //and images of all Remixes made of that original Gallery image
-    //use a route here to ImageRemixHistory.js???
-  }
+//   imageClick = () => {
+//     console.log('Image was Clicked!!!!');
+//     //Open new page with clicked Gallery Image, upload/download buttons,
+//     //and images of all Remixes made of that original Gallery image
+//     //use a route here to ImageRemixHistory.js???
+//   }
 
+<<<<<<< HEAD
   render() {
     return(
       <Link to="/ImageRemixHistory">
@@ -40,6 +42,14 @@ class GalleryImages extends Component {
     );
   }
 }
+=======
+//   render() {
+//     return(
+//       <img className={this.props.className} src={this.props.src} alt={this.props.alt} onClick={this.imageClick} />
+//     );
+//   }
+// }
+>>>>>>> master
 
 
 // Component for gallery
@@ -66,7 +76,7 @@ class Gallery extends Component{
         </div>
         <div refs='gallery-container' className='container-fluid gallery-container'>
           <div className='row'>
-            {
+            {/* {
               imgUrls.map((url, index) => {
                 return <div className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
@@ -74,7 +84,9 @@ class Gallery extends Component{
                     </div>
                   </div>
               })
-            }
+            } */}
+              <h2>when you click image, it redirects to User Remix Gallery</h2>
+              <a href='/UserRemixGallery'><img src={downloadimage}/></a>
           </div>
         </div>
       </div>
