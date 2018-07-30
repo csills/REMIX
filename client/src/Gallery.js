@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './Gallery.css';
 import ImageRemixHistory from './ImageRemixHistory';
 
@@ -34,7 +34,9 @@ class GalleryImages extends Component {
 
   render() {
     return(
-      <img className={this.props.className} src={this.props.src} alt={this.props.alt} onClick={this.imageClick} />
+      <Link to="/ImageRemixHistory">
+        <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
+      </Link>
     );
   }
 }

@@ -6,6 +6,7 @@ import remixLogo from './Remix-Logo.png';
 import Gallery from './Gallery';
 import './Gallery.css';
 import UserRemixGallery from './UserRemixGallery';
+import ImageRemixHistory from './ImageRemixHistory';
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/Gallery" component={Gallery} />
                 <Route exact path="/UserRemixGallery" component={UserRemixGallery} />
+                <Route exact path="/ImageRemixHistory" component={ImageRemixHistory} />
               </Switch>
           </div>
         </header>
