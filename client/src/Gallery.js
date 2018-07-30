@@ -33,6 +33,7 @@ import downloadimage from './one.jpg'
 //     //use a route here to ImageRemixHistory.js???
 //   }
 
+class GalleryImages extends Component {
   render() {
     return(
       <Link to="/ImageRemixHistory">
@@ -40,6 +41,7 @@ import downloadimage from './one.jpg'
       </Link>
     );
   }
+}
 //   render() {
 //     return(
 //       <img className={this.props.className} src={this.props.src} alt={this.props.alt} onClick={this.imageClick} />
