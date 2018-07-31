@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Gallery.css';
+//import './Gallery.css';
+import './ImageRemixHistory.css';
 
 let image = 'http://bomdia.lu/wp-content/uploads/sites/7/2016/12/intelectual.jpg'
 
@@ -31,42 +32,41 @@ class ImageRemixHistory extends Component {
     render() {
         return  (
             <div>
+            <div>
                 {<Link to="/Gallery">Main Gallery</Link> }
                 
-                <div refs='gallery-container' className='container-fluid gallery-container'>
+                <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                     <div className='row'>
                         <div className='imageDownloadBox'>
-                            <img src= {image} alt={this.props.alt} width='800' height='600'/>
+                            <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/>
                             <a href={image} download>
                             <br/>
                             <br/>
                             <button>Download This Photo</button>
                             </a>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </div>
-                    </div>
-        
-
-                    {/* This is where all the remixes submitted for an 
-                        Indiviual image will appear: */}
-                    <h1>Checkout this Images Remix History</h1>
-                    <div refs='remix-gallery-container' className='container-fluid gallery-container'>
-                        <div className='row'>
-                            {
-                                imgUrls.map((url, index) => {
-                                    return <div className='col-sm-6 col-md-3 col-xl-2'>
-                                        <div className = 'gallery-card'>
-                                            <ImageRemixHistoryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
-                                        </div>
-                                    </div>
-                                })
-                            }
                         </div>
                     </div>
                 </div>
             </div>
+        
+
+            {/* This is where all the remixes submitted for an 
+                Indiviual image will appear: */}
+            <h1>Checkout this Images Remix History</h1>
+            <div refs='remix-gallery-container' className='container-fluid gallery-container'>
+                <div className='row'>
+                    {
+                        imgUrls.map((url, index) => {
+                            return <div className='col-sm-6 col-md-3 col-xl-2'>
+                                <div className = 'gallery-card'>
+                                    <ImageRemixHistoryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
+                                </div>
+                            </div>
+                        })
+                    }
+                </div>
+            </div>
+        </div>
         )
     }
 }
