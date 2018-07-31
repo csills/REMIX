@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import downloadimage from './one.jpg'
+import './Gallery.css';
 
+let image = 'http://bomdia.lu/wp-content/uploads/sites/7/2016/12/intelectual.jpg'
 //This is where a User can see all images they have Remixed
 class ImageRemixHistory extends Component {
     render() {
@@ -12,8 +13,8 @@ class ImageRemixHistory extends Component {
                 <div refs='gallery-container' className='container-fluid gallery-container'>
                     <div className='row'>
                         <div className='imageDownloadBox'>
-                            <img src= {downloadimage} alt={this.props.alt} />
-                            <a href={downloadimage} download>
+                            <img src= {image} alt={this.props.alt} />
+                            <a href={image} download>
                             <br/>
                             <br/>
                             <button>Download This Photo</button>
@@ -28,7 +29,8 @@ class ImageRemixHistory extends Component {
                         <div className='row'>
                             <div className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className='gallery-card'>
-                                     {/*Remix Images Go Here*/} 
+                                     <img className='gallery-thumbnail' src='http://img.over-blog-kiwi.com/0/84/27/39/20140506/ob_04cca0_1901994-809625892384301-54454870-n.jpg' alt='remix'/>
+                                     <img className='gallery-thumbnail' src='http://civitasinc.com/2013/wp-content/uploads/2013/08/image-coming-soon.jpg' alt='remix'/>
                                 </div>
                             </div>
                         </div>
