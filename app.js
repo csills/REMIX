@@ -4,8 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const gallery = require('./routes/gallery');
-const remix = require('./routes/remix');
+//const api = require('./routes/api');
 
 const app = express();
 
@@ -16,8 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.use('/gallery', gallery);
-app.use('/remix', remix);
+//app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
