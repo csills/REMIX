@@ -6,7 +6,7 @@ import './Gallery.css';
 
 // Array with URLs for Gallery Images
 let imgUrls = [
-  'http://bomdia.lu/wp-content/uploads/sites/7/2016/12/intelectual.jpg',
+   'https://source.unsplash.com/WNAccGuvPYU/800x600',
    'https://source.unsplash.com/E4944K_4SvI/800x600',
    'https://source.unsplash.com/3Z70SDuYs5g/800x600',
    'https://source.unsplash.com/01vFmYAOqQ0/800x600',
@@ -15,7 +15,7 @@ let imgUrls = [
    'https://source.unsplash.com/pHANr-CpbYM/800x600',
    'https://source.unsplash.com/3PmwYw2uErY/800x600',
    'https://source.unsplash.com/uOi3lg8fGl4/800x600',
-   'https://source.unsplash.com/CwkiN6_qpDI/800x600',
+   'https://source.unsplash.com/WGJkReFcj1k/800x600',
    'https://source.unsplash.com/-hI5dX2ObAs/800x600',
    'https://source.unsplash.com/vZlTg_McCDo/800x600'
  ];

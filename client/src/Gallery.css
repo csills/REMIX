@@ -41,12 +41,6 @@ body {
   transform: translate(-50%, -50%);
   transition: all .25s ease-in-out;
   
-  /*
-  focus  hover {
-    color: #111;
-  }
-  */
-  
 }
 
 .gallery-thumbnail:focus ~ .card-icon-open,
@@ -86,11 +80,4 @@ body {
   font-size: 1.5rem;
   color: #111;
   transition: all .25s ease-in-out;
-  
-  /*
-  &:focus,
-  &:hover {
-    color: #fff;
-  }
-  */
 }
