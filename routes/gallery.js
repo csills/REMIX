@@ -3,8 +3,9 @@ var router = express.Router();
 var axios = require('axios');
 
 /* GET all Gallery Images */
-router.get('/gallery/filepath', function(req, res, next) {
-    axios.get('gallery/filepath')
+//Not sure about this code??
+router.get('/', function(req, res, next) {
+    axios.get('routes/gallery')
         .then(({data})=>{
             res.json(data);
         }).catch((error)=>{
