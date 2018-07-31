@@ -6,6 +6,8 @@ import './Gallery.css';
 // Array with URLs for User Remix Gallery Images
 let imgUrls = [
     'http://img.over-blog-kiwi.com/0/84/27/39/20140506/ob_04cca0_1901994-809625892384301-54454870-n.jpg',
+    'https://source.unsplash.com/hKU5dmGfSKY/800x600',
+    'https://source.unsplash.com/PRwcKlZDpc0/800x600'
   ];
 
 
