@@ -17,8 +17,8 @@ router.get('/', function(req, res, next) {
   
   /* GET individual Gallery Image */
   /*
-  router.get('/jobs/:id', function(req, res, next) {
-    axios.get('http://jobs.github.com/positions/' + req.params.id + '.json')
+  router.get('/gallery/filepath', function(req, res, next) {
+    axios.get('???' + req.params.id + '.json')
         .then(({data})=>{
         res.json(data);
       }).catch((error)=>{
