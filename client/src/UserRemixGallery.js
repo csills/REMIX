@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Gallery.css';
+import './App.css';
+import './UserRemixGallery.css';
 
 
 // Array with URLs for User Remix Gallery Images
@@ -36,8 +37,8 @@ class UserRemixGallery extends Component {
     render() {
         return (
         <div>
-            <div>
-                <h1>"User's Name" Remix Gallery</h1>
+            <div className="UserRemix">
+                <h1 className="UserName">"User's Name" Remix Gallery</h1>
                 {<Link to="/Gallery">Main Gallery</Link> }
             </div>
 

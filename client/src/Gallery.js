@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+//import axios from 'axios';
+import './App.css';
 import './Gallery.css';
 
 
@@ -45,6 +46,7 @@ class Gallery extends Component{
     };
   }
 
+  /*
     componentDidMount() {
       axios.get('/routes/gallery')
         .then(( {data} ) => {
@@ -53,6 +55,7 @@ class Gallery extends Component{
           console.log(data);
         })
     }
+  */
     
 
   
@@ -62,7 +65,7 @@ class Gallery extends Component{
         <div>
           <h2>{this.state.remixTagLine}</h2>
           <p className="App-intro">
-          "Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product."
+          Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product.
           </p>
         </div>
 

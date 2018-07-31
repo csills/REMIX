@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
-import remixLogo from './Remix-Logo.png';
+import remixLogo from './Remix-Logo.jpg';
 import Gallery from './Gallery';
 import UserRemixGallery from './UserRemixGallery';
 import ImageRemixHistory from './ImageRemixHistory';
