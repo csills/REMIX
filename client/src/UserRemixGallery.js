@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import downloadimage from './one.jpg'
+import Uploadbutton from './Uploadbutton';
+// import Uploading from './Uploading';
 
 //This is where a User can see all images they have Remixed
 class UserRemixGallery extends Component {
@@ -15,6 +17,8 @@ class UserRemixGallery extends Component {
                     <a href={downloadimage} download>
                         <button>Download This Photo</button>
                     </a>
+                    <Uploadbutton />
+                    {/* <Uploading /> */}
                 </div>
             </div>
         </div>
