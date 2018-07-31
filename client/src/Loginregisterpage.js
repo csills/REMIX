@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Loginregister from './components/Loginregister';
+import './Loginregisterpage.css';
 
 class Loginregisterpage extends Component {
     render() {
