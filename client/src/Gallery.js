@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import axios from 'axios';
+import axios from 'axios';
 import './App.css';
 import './Gallery.css';
 
 
 // Array with URLs for Gallery Images
+// We need to pull this data in from database eventually using axios
 let imgUrls = [
-  'img/Mona_Lisa_Original.jpg',
   'https://source.unsplash.com/WNAccGuvPYU/800x600',
   'https://source.unsplash.com/E4944K_4SvI/800x600',
   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
@@ -49,7 +49,10 @@ class Gallery extends Component{
 
   /*
     componentDidMount() {
-      axios.get('/routes/gallery')
+      // use axios.get to fill the imgUrls array with all Gallery images??
+      let imgUrls = [];
+
+      axios.get('/routes/api/gallery')
         .then(( {data} ) => {
 
           this.setState({ gallery:data });

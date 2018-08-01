@@ -21,10 +21,6 @@ class App extends Component {
               <Link to="/Gallery">Gallery</Link>
               <Link to="/UserRemixGallery">Remixes</Link>
               <Link to="/Loginregisterpage">Login</Link>
-<<<<<<< HEAD
-              <Link to="/Sendemail">Email</Link>
-=======
->>>>>>> master
           </div>
         </header>
 

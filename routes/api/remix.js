@@ -4,7 +4,7 @@ const models = require('../models');
 
 /* Check to make sure router is set to render to localhost
 router.get('/', function(req, res, next) {
-    res.render('sceneItList', { title: 'Scene It Too?' });
+    res.render('Remix', { title: 'Remix: a gallery' });
   });
   */
 
@@ -17,7 +17,6 @@ router.get('/', function(req, res, next) {
         },
         include: [
             models.Galleries,
-            models.Users,
         ]
     })
 
