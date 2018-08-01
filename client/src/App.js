@@ -21,7 +21,7 @@ class App extends Component {
               <Link to="/Gallery">Gallery</Link>
               <Link to="/UserRemixGallery">Remixes</Link>
               <Link to="/Loginregisterpage">Login / Register</Link>
-              <Link to="/Sendemail">Email</Link>
+              <Link to="/Sendemail">Subscribe</Link>
           </div>
           <div className="routes">
               <Switch>
