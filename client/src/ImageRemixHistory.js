@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './App.css';
 //import './Gallery.css';
 import './ImageRemixHistory.css';
@@ -28,6 +29,16 @@ class ImageRemixHistory extends Component {
         this.state = {
             url: '',
         };
+    }
+
+
+    componentDidMount() {
+      axios.get('/routes/remixes')
+        .then(( {data} ) => {
+
+          this.setState({ remixes:data });
+          console.log(data);
+        })
     }
 
     render() {

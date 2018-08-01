@@ -12,7 +12,6 @@ dotenv.load();
 
 const remix = require('./routes/api/remix');
 const apiMailRouter = require('./routes/api/mail');
-//const api = require('./routes/api');
 const setupAuth = require('./auth');
 
 const app = express();
@@ -49,8 +48,6 @@ app.post('/upload', (req, res, next) => {
 
 app.use('/api/remix', remix);
 app.use('/api/mail', apiMailRouter);
-
-//app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
