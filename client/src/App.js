@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
-import remixLogo from './Remix-Logo.jpg';
+import remixLogo from './img/Remix-Logo.jpg';
 import Gallery from './Gallery';
 import UserRemixGallery from './UserRemixGallery';
 import ImageRemixHistory from './ImageRemixHistory';
@@ -21,7 +21,10 @@ class App extends Component {
               <Link to="/Gallery">Gallery</Link>
               <Link to="/UserRemixGallery">Remixes</Link>
               <Link to="/Loginregisterpage">Login</Link>
+<<<<<<< HEAD
               <Link to="/Sendemail">Email</Link>
+=======
+>>>>>>> master
           </div>
         </header>
 
