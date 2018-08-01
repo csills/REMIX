@@ -31,15 +31,20 @@ class ImageRemixHistory extends Component {
         };
     }
 
-
+  /*
     componentDidMount() {
-      axios.get('/routes/remixes')
+      // use axios.get to fill the imgUrls array with all Gallery images??
+      let imgUrls = [];
+
+      axios.get('/routes/api/gallery')
         .then(( {data} ) => {
 
-          this.setState({ remixes:data });
+          this.setState({ gallery:data });
           console.log(data);
         })
     }
+  */
+
 
     render() {
         return  (
