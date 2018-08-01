@@ -6,7 +6,7 @@ class Loginregisterpage extends Component {
     render() {
         return  (
         <div>
-            <Loginregister></Loginregister>
+            <Loginemail></Loginemail>
         </div>
         )
     }
