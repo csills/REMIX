@@ -20,8 +20,13 @@ class App extends Component {
           <div className="navbar">
               <Link to="/Gallery">Gallery</Link>
               <Link to="/UserRemixGallery">Remixes</Link>
+<<<<<<< HEAD
+              <Link to="/Loginregisterpage">Login / Register</Link>
+              <Link to="/Sendemail">Subscribe</Link>
+=======
               <Link to="/Loginregisterpage">Login</Link>
               <Link to="/Sendemail">Email</Link>
+>>>>>>> master
           </div>
         </header>
 

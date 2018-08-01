@@ -28,7 +28,7 @@ class Sendemailfunction extends Component {
         return (
             <div>
                 <div className="Email">
-                    <button onClick={this.sendemail.bind(this)}>Testing: Receive Email from Server</button>
+                    <button onClick={this.sendemail.bind(this)}>Subscribe</button>
                 </div>
             </div>
         );
