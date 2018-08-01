@@ -40,9 +40,9 @@ class ImageRemixHistory extends Component {
                     <div className='row'>
                         <div className='imageDownloadBox'>
                             <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/>
+                            <br/>
+                            <br/>
                             <a href={image} download>
-                            <br/>
-                            <br/>
                             <button>Download This Photo</button>
                             </a>
                         </div>
