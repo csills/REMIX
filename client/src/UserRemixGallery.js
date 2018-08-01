@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import downloadimage from './one.jpg'
-import Uploadbutton from './Uploadbutton';
-// import Uploading from './Uploading';
-=======
 import './App.css';
 import './UserRemixGallery.css';
->>>>>>> master
 
 
 // Array with URLs for User Remix Gallery Images
@@ -50,14 +44,6 @@ class UserRemixGallery extends Component {
 
             <div refs='gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
-<<<<<<< HEAD
-                    <img src= {downloadimage} />
-                    <a href={downloadimage} download>
-                        <button>Download This Photo</button>
-                    </a>
-                    <Uploadbutton />
-                    {/* <Uploading /> */}
-=======
                     {
                         imgUrls.map((url, index) => {
                             return <div className='col-sm-6 col-md-3 col-xl-2'>
@@ -67,7 +53,6 @@ class UserRemixGallery extends Component {
                             </div>
                         })
                     }
->>>>>>> master
                 </div>
             </div>
         </div>
