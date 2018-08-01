@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Loginregister from './components/Loginregister';
+import Loginemail from './components/Loginemail';
 import './Loginregisterpage.css';
 
 class Loginregisterpage extends Component {
