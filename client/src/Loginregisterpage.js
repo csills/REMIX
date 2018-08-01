@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Loginregister from './components/Loginregister';
+<<<<<<< HEAD
 import Loginemail from './components/Loginemail';
+=======
+import './Loginregisterpage.css';
+>>>>>>> master
 
 class Loginregisterpage extends Component {
     render() {
