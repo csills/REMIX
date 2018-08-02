@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const models = require('../models');
+const models = require('../../models');
 
 /* Check to make sure router is set to render to localhost
 router.get('/', function(req, res, next) {
