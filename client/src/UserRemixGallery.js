@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import './UserRemixGallery.css';
-
+import Remix from './Remix';
 
 // Array with URLs for User Remix Gallery Images
 let imgUrls = [
@@ -43,6 +43,9 @@ class UserRemixGallery extends Component {
             </div>
 
             <div refs='gallery-container' className='container-fluid gallery-container'>
+                <div>
+                    <Remix />
+                </div>
                 <div className='row'>
                     {
                         imgUrls.map((url, index) => {

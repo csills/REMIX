@@ -7,6 +7,7 @@ import UserRemixGallery from './UserRemixGallery';
 import ImageRemixHistory from './ImageRemixHistory';
 import Loginregisterpage from './Loginregisterpage';
 import Sendemail from './Sendemail';
+import Uploadbutton from './Uploadbutton';
 
 
 class App extends Component {
@@ -35,7 +36,9 @@ class App extends Component {
               <Route exact path="/" component={Gallery} />
             </Switch>
         </div>
-        
+        <div>
+          <Uploadbutton />
+        </div>
       </div>
     );
   }

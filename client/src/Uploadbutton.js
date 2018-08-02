@@ -6,7 +6,7 @@ class Uploadbutton extends Component {
     super(props);
 
     this.state = {
-      imageURL: '',
+      imageURL: [],
     };
 
     this.handleUploadImage = this.handleUploadImage.bind(this);

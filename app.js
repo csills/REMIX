@@ -10,7 +10,7 @@ const cors = require('cors');
 
 dotenv.load();
 
-const remix = require('./routes/api/remix');
+// const apiRemixRouter = require('./routes/api/remix');
 const apiMailRouter = require('./routes/api/mail');
 //const api = require('./routes/api');
 const setupAuth = require('./auth');
@@ -30,24 +30,22 @@ app.use(cookieParser());
 app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-
 setupAuth(app);
 
 app.post('/upload', (req, res, next) => {
   console.log(req);
   let imageFile = req.files.file;
-
   imageFile.mv(`${__dirname}/client/build/${req.body.filename}.jpg`, function(err) {
     if (err) {
       return res.status(500).send(err);
     }
-
-    res.json({file: `uploads/${req.body.filename}.jpg`});
+    // res.send('File uploaded!');
+    res.json({file: `upload/${req.body.filename}.jpg`});
   });
 
 })
 
-app.use('/api/remix', remix);
+// app.use('/api/remix', apiRemixRouter);
 app.use('/api/mail', apiMailRouter);
 
 //app.use('/api', api);
