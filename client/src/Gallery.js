@@ -78,7 +78,7 @@ class Gallery extends Component{
             {
               imgUrls.map((url, index) => {
               //this.state.gallery.map((url, index) => {
-                return <div className='col-sm-6 col-md-3 col-xl-2'>
+                return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
                       <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={url} alt={'Image number ' + (index + 1)} />  
                     </div>
