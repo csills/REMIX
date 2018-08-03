@@ -8,18 +8,18 @@ import './Gallery.css';
 // Array with URLs for Gallery Images
 // We need to pull this data in from database eventually using axios
 let imgUrls = [
+  'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg',
+  'https://culturehog.com/wp-content/uploads/best-parodies.jpg',
   'https://source.unsplash.com/WNAccGuvPYU/800x600',
   'https://source.unsplash.com/E4944K_4SvI/800x600',
   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
   'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-  'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
   'https://source.unsplash.com/t20pc32VbrU/800x600',
   'https://source.unsplash.com/pHANr-CpbYM/800x600',
   'https://source.unsplash.com/3PmwYw2uErY/800x600',
   'https://source.unsplash.com/uOi3lg8fGl4/800x600',
   'https://source.unsplash.com/WGJkReFcj1k/800x600',
-  'https://source.unsplash.com/-hI5dX2ObAs/800x600',
-  'https://source.unsplash.com/vZlTg_McCDo/800x600'
+  'https://source.unsplash.com/-hI5dX2ObAs/800x600'
  ];
 
 //  Component for gallery images

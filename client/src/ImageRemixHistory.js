@@ -3,12 +3,18 @@ import axios from 'axios';
 import './App.css';
 import './ImageRemixHistory.css';
 
-let image = 'http://bomdia.lu/wp-content/uploads/sites/7/2016/12/intelectual.jpg'
+let image = 'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg'
 
 let imgUrls = [
-    'https://source.unsplash.com/hKU5dmGfSKY/800x600',
-    'https://source.unsplash.com/PRwcKlZDpc0/800x600',
-    'http://img.over-blog-kiwi.com/0/84/27/39/20140506/ob_04cca0_1901994-809625892384301-54454870-n.jpg'
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-02.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-12.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-32.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-27.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-14.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-30.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-28.jpg'
+    
   ];
 
 class ImageRemixHistoryImages extends Component {
