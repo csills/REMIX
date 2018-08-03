@@ -2,12 +2,11 @@ const express = require('express');
 const router = express.Router();
 const models = require('../../models');
 
-/* Check to make sure router is set to render to localhost
+// Check to make sure router is set to render to localhost
 router.get('/', function(req, res, next) {
     res.render('Remix', { title: 'Remix: a gallery' });
   });
-  */
-
+  //
 
 // GET all of the Remixes for a Gallery Image
 router.get('/', function(req, res, next) {
