@@ -46,20 +46,6 @@ class ImageRemixHistory extends Component {
     }
     */
 
-  /*
-    componentDidMount() {
-      // use axios.get to fill the imgUrls array with all Gallery images??
-      let imgUrls = [];
-
-      axios.get('/routes/api/gallery')
-        .then(( {data} ) => {
-
-          this.setState({ gallery:data });
-          console.log(data);
-        })
-    }
-  */
-
 
     render() {
         return  (
@@ -83,8 +69,8 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            <button onClick={() => this.fileInput.click()}>Choose File</button>
-                            <button onClick={this.fileUploadHandler}>Upload Remix</button>
+                            <button onClick={() => this.fileInput.click()}>Choose Image URL</button>
+                            <button onClick={this.fileUploadHandler}>Upload</button>
                         </div>
                     </div>
                 </div>

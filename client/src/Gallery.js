@@ -43,25 +43,10 @@ class Gallery extends Component{
     this.state = {
       remixTagLine: "A space to create and re-create.",
       url: '',
-      //gallery: []
     };
   }
 
-  /*
-    componentDidMount() {
-      // use axios.get to fill the imgUrls array with all Gallery images??
-      let imgUrls = [];
-
-      axios.get('/routes/api/gallery')
-        .then(( {data} ) => {
-
-          this.setState({ gallery:data });
-          console.log(data);
-        })
-    }
-  */
-    
-
+  
   
   render() {
     return(
@@ -77,6 +62,7 @@ class Gallery extends Component{
           <div className='row'>
             {
               imgUrls.map((url, index) => {
+              // below is the code to use when switching over to call images from database:
               //this.state.gallery.map((url, index) => {
                 return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
