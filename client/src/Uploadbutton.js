@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react';
 
-class Uploadbutton extends Component {
+class Main extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      imageURL: [],
+      imageURL: "",
     };
 
     this.handleUploadImage = this.handleUploadImage.bind(this);
@@ -19,12 +18,12 @@ class Uploadbutton extends Component {
     data.append('file', this.uploadInput.files[0]);
     data.append('filename', this.fileName.value);
 
-    fetch('http://localhost:3001/upload', {
+    fetch('/api/remix2/upload', {
       method: 'POST',
       body: data,
     }).then((response) => {
       response.json().then((body) => {
-        this.setState({ imageURL: `http://localhost:3001/${body.file}` });
+        this.setState({ imageURL: `/api/remix2/upload/${body.file}` });
       });
     });
   }
@@ -48,4 +47,4 @@ class Uploadbutton extends Component {
   }
 }
 
-export default Uploadbutton;
+export default Main;

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 //import './Gallery.css';
 import './ImageRemixHistory.css';
+import axios from 'axios';
 
 let image = 'http://bomdia.lu/wp-content/uploads/sites/7/2016/12/intelectual.jpg'
 
@@ -27,8 +28,21 @@ class ImageRemixHistory extends Component {
 
         this.state = {
             url: '',
+            gallery: {
+                Remixes: [],
+            },
         };
     }
+
+
+    componentDidMount() {
+        axios.get(`/api/gallery/${this.props.match.params.id}`)
+            .then(( {data} ) => {
+                this.setState({ gallery: data });
+                console.log(data);
+            })
+    }
+
 
     render() {
         return  (
@@ -39,7 +53,7 @@ class ImageRemixHistory extends Component {
                 <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                     <div className='row'>
                         <div className='imageDownloadBox'>
-                            <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/>
+                            <img className='img-responsive center-block img-rounded' src= {this.state.gallery.filepath} alt={this.props.alt}/>
                             <a href={image} download>
                             <br/>
                             <br/>
@@ -57,7 +71,7 @@ class ImageRemixHistory extends Component {
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     {
-                        imgUrls.map((url, index) => {
+                        this.state.gallery.Remixes.map((url, index) => {
                             return <div className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
                                     <ImageRemixHistoryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />

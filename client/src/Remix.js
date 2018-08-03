@@ -7,25 +7,25 @@ class Remix extends Component {
     constructor() {
         super();
         this.state = {
-            filepath: []
+            filepath: ""
         }
 
-        const data = new FormData();
-        data.append('file', this.uploadInput.files[0]);
-        data.append('filename', this.fileName.value);    
+        // const data = new FormData();
+        // data.append('file', this.uploadInput.files[0]);
+        // data.append('filename', this.fileName.value);    
     }
     
     
     componentDidMount() {
-        axios.get('/').then(({data})=>{
+        axios.get(`/api/remix/${this.props.id}`).then(({data})=>{
         this.setState(data)
         });
       }
     
     remixedimage() {
-        // axios.post('/api/remix2').then(({data})=>{
-        axios.post('/api/remix').then(({data})=>{
+        axios.post('/api/remix2/upload').then(({data})=>{
         this.setState(data);
+        console.log(this.state);
         })
     }
     
@@ -40,7 +40,7 @@ class Remix extends Component {
             </div>
             <br />
             <div>
-              <button>Upload</button>
+              <button onClick={this.remixedimage.bind(this)}>Upload</button>
             </div>
             <img src={this.state.filepath} alt="img" />
           </form>

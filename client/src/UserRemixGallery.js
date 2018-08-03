@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import './UserRemixGallery.css';
 import Remix from './Remix';
+import Uploadbutton from './Uploadbutton';
 
 // Array with URLs for User Remix Gallery Images
 let imgUrls = [

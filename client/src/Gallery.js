@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import axios from 'axios';
+import axios from 'axios';
 import './App.css';
 import './Gallery.css';
 
@@ -26,7 +26,7 @@ class GalleryImages extends Component {
 
   render() {
     return(
-      <Link to="/ImageRemixHistory">
+      <Link to={`/gallery/${this.props.galleryid}`}>
         <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
       </Link>
     );
@@ -42,20 +42,17 @@ class Gallery extends Component{
     this.state = {
       remixTagLine: "A space to create and re-create.",
       url: '',
-      //gallery: []
+      galleries: []
     };
   }
 
-  /*
-    componentDidMount() {
-      axios.get('/routes/gallery')
-        .then(( {data} ) => {
-
-          this.setState({ gallery:data });
-          console.log(data);
-        })
-    }
-  */
+  componentDidMount() {
+    axios.get('/api/galleries')
+      .then(( {data} ) => {
+        this.setState({ galleries: data });
+        console.log(data);
+      })
+  }
     
 
   
@@ -72,11 +69,11 @@ class Gallery extends Component{
         <div refs='gallery-container' className='container-fluid gallery-container'>
           <div className='row'>
             {
-              imgUrls.map((url, index) => {
+              this.state.galleries.map((gallery, index) => {
               //this.state.gallery.map((url, index) => {
                 return <div className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
-                      <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={url} alt={'Image number ' + (index + 1)} />  
+                      <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={gallery.filepath} alt={'Image number ' + (index + 1)} galleryid={gallery.id} />  
                     </div>
                 </div>
               })

@@ -8,10 +8,23 @@ import ImageRemixHistory from './ImageRemixHistory';
 import Loginregisterpage from './Loginregisterpage';
 import Sendemail from './Sendemail';
 import Uploadbutton from './Uploadbutton';
+// import axios from 'axios';
 
+// axios({
+//   url: 'http://localhost:3001/api/remix/upload/hi.jpg',
+//   method: 'GET',
+//   responseType: 'blob', // important
+// }).then((response) => {
+//   const url = window.URL.createObjectURL(new Blob([response.data]));
+//   const link = document.createElement('a');
+//   link.href = url;
+//   link.setAttribute('download', 'file.pdf');
+//   document.body.appendChild(link);
+//   link.click();
+// });
 
 class App extends Component {
-
+  
   render() {
     return (
       <div className="App">
@@ -30,7 +43,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/Gallery" component={Gallery} />
               <Route exact path="/UserRemixGallery" component={UserRemixGallery} />
-              <Route exact path="/ImageRemixHistory" component={ImageRemixHistory} />
+              <Route exact path="/gallery/:id" component={ImageRemixHistory} />
               <Route exact path="/Loginregisterpage" component={Loginregisterpage} />
               <Route exact path="/Sendemail" component={Sendemail} />
               <Route exact path="/" component={Gallery} />
