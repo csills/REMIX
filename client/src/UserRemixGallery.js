@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
 import './UserRemixGallery.css';
 
@@ -40,7 +39,6 @@ class UserRemixGallery extends Component {
         <div>
             <div className="UserRemix">
                 <h1 className="UserName">Crystal's Remix Gallery</h1>
-                {<Link to="/Gallery">Main Gallery</Link> }
             </div>
 
             <div refs='gallery-container' className='container-fluid gallery-container'>
