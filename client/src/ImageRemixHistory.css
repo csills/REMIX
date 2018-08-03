@@ -5,3 +5,12 @@
     margin: auto;
     
     }
+
+    .upload {
+        max-width: 100%;
+        height: auto !important;
+        text-align: center;
+        padding-left: 70px;
+        margin: auto;
+        
+        }

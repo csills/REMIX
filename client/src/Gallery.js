@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//import axios from 'axios';
+import axios from 'axios';
 import './App.css';
 import './Gallery.css';
 
 
 // Array with URLs for Gallery Images
+// We need to pull this data in from database eventually using axios
 let imgUrls = [
-   'https://source.unsplash.com/WNAccGuvPYU/800x600',
-   'https://source.unsplash.com/E4944K_4SvI/800x600',
-   'https://source.unsplash.com/3Z70SDuYs5g/800x600',
-   'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-   'https://source.unsplash.com/2Bjq3A7rGn4/800x600',
-   'https://source.unsplash.com/t20pc32VbrU/800x600',
-   'https://source.unsplash.com/pHANr-CpbYM/800x600',
-   'https://source.unsplash.com/3PmwYw2uErY/800x600',
-   'https://source.unsplash.com/uOi3lg8fGl4/800x600',
-   'https://source.unsplash.com/WGJkReFcj1k/800x600',
-   'https://source.unsplash.com/-hI5dX2ObAs/800x600',
-   'https://source.unsplash.com/vZlTg_McCDo/800x600'
+  'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg',
+  'https://culturehog.com/wp-content/uploads/best-parodies.jpg',
+  'https://source.unsplash.com/WNAccGuvPYU/800x600',
+  'https://source.unsplash.com/E4944K_4SvI/800x600',
+  'https://source.unsplash.com/3Z70SDuYs5g/800x600',
+  'https://source.unsplash.com/01vFmYAOqQ0/800x600',
+  'https://source.unsplash.com/t20pc32VbrU/800x600',
+  'https://source.unsplash.com/pHANr-CpbYM/800x600',
+  'https://source.unsplash.com/3PmwYw2uErY/800x600',
+  'https://source.unsplash.com/uOi3lg8fGl4/800x600',
+  'https://source.unsplash.com/WGJkReFcj1k/800x600',
+  'https://source.unsplash.com/-hI5dX2ObAs/800x600'
  ];
 
 //  Component for gallery images
@@ -48,7 +49,10 @@ class Gallery extends Component{
 
   /*
     componentDidMount() {
-      axios.get('/routes/gallery')
+      // use axios.get to fill the imgUrls array with all Gallery images??
+      let imgUrls = [];
+
+      axios.get('/routes/api/gallery')
         .then(( {data} ) => {
 
           this.setState({ gallery:data });
@@ -74,16 +78,13 @@ class Gallery extends Component{
             {
               imgUrls.map((url, index) => {
               //this.state.gallery.map((url, index) => {
-                return <div className='col-sm-6 col-md-3 col-xl-2'>
+                return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
                       <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={url} alt={'Image number ' + (index + 1)} />  
                     </div>
                 </div>
               })
             }
-              {/*<h2>when you click image, it redirects to User Remix Gallery</h2>
-              <a href='/ImageRemixGallery'><img src={downloadimage} alt={this.props.alt}/></a>
-              */}
           </div>
         </div>
       </div>
