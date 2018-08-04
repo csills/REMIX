@@ -20,8 +20,8 @@ class Loginregister extends Component {
         <div className="login-form">
             {this.state.user ? (
                 <div className="user">
-                    <span className="email">Hello, {this.state.user.username}</span>
-                    <button onClick={this.logout}>Log Out</button>
+                    <h1 className="hello">Hello, {this.state.user.username}</h1>
+                    <button className="submitbuttons" onClick={this.logout}>Log Out</button>
                 </div>
             ) : (
                 <div className="user-form">
