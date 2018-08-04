@@ -17,24 +17,51 @@
   background-color: #ffffff;
   margin-bottom: 10px;
   padding-right: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .user-form .login-form {
   color: black;
+  text-transform: uppercase;
   padding-top: 100px;
 }
+/* .user-form a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  color: gray
+}
+
+.user-form a:hover {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.user-form a:active {
+  color: black;
+  text-transform: uppercase;
+} */
 
 .navbar a {
   color: #000000;
   margin: 5px;
+  margin-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navbar a:hover {
   color: grey;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .navbar a:active {
   color: orange;
+  text-transform: uppercase;
 }
 
 .App-intro {
@@ -45,9 +72,78 @@
 .Email {
   color: black;
   padding-bottom: 100px;
+  text-transform: uppercase;
 }
 .EmailDescription {
   color: black;
   padding-top: 100px;
+  text-transform: uppercase;
 }
 
+.submitbuttons, .downloadButton, .uploadButton {
+  color: black;
+  background-color:white;
+  border-color:rgb(0, 0, 0);
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submitbuttons:hover {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-color:rgb(0, 0, 0);
+  text-transform: uppercase;
+  }
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  /* font-weight: lighter; */
+  font-size: 80%;
+}
+
+buttons:disabled {
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+.topbuttons {
+  color: grey;
+  background-color: white;
+  border-color:white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.topbuttons:hover {
+  color: black;
+  background-color: white;
+  border-color:white;
+  text-transform: uppercase;
+}
+
+.topbuttons:disabled {
+  color: black;
+  background-color: white;
+  border-color:white;
+  text-transform: uppercase;
+}
+
+.about {
+  margin-top: 10%;
+}
+
+.card {
+  margin: auto;
+  margin-bottom: 70px;
+}

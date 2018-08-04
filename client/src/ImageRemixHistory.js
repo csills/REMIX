@@ -78,7 +78,7 @@ class ImageRemixHistory extends Component {
                         <br/>
                         <div className='downloadButton'>
                             <a href={this.state.gallery.filepath} download>
-                            <button>Download This Photo</button>
+                            <button className="submitbuttons" >Download This Photo</button>
                             </a>
                         </div>
                         <br/>
@@ -89,8 +89,9 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            <button onClick={() => this.fileInput.click()}>Insert Remix Image URL</button>
-                            <button onClick={this.fileUploadHandler}>Upload Remix</button>
+                            Insert Remix Image URL: <input name="registerEmail" type="text" required size="50" /> 
+                            {/* <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button> */}
+                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload URL</button>
                         </div>
                     </div>
                 </div>
@@ -104,10 +105,10 @@ class ImageRemixHistory extends Component {
                 <div className='row'>
                     {
                         //imgUrls.map((url, index) => {
-                        this.state.gallery.Remixes.map((url, index) => {
+                        this.state.gallery.Remixes.map((remix, index) => {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
-                                    <ImageRemixHistoryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
+                                    <ImageRemixHistoryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
                                     {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>

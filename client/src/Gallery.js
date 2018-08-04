@@ -78,8 +78,8 @@ class Gallery extends Component{
     return(
       <div>
         <div>
-          <h2>{this.state.remixTagLine}</h2>
           <p className="App-intro">
+          <h2>{this.state.remixTagLine}</h2>
           Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product.
           </p>
         </div>

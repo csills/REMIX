@@ -20,16 +20,16 @@ class Loginregister extends Component {
         <div className="login-form">
             {this.state.user ? (
                 <div className="user">
-                    <span className="email">Email: {this.state.user.email}</span>
-                    <button onClick={this.logout}>Log Out</button>
+                    <h1 className="hello">Hello, {this.state.user.username}</h1>
+                    <button className="submitbuttons" onClick={this.logout}>Log Out</button>
                 </div>
             ) : (
                 <div className="user-form">
-                    <button onClick={this.showSignupForm} disabled={this.state.signupFormVisible}>Register</button>
-                    <button onClick={this.showLoginForm} disabled={!this.state.signupFormVisible}>Login</button>
+                    <button className="topbuttons" onClick={this.showSignupForm} disabled={this.state.signupFormVisible}>Register</button>
+                    <button className="topbuttons" onClick={this.showLoginForm} disabled={!this.state.signupFormVisible}>Login</button>
                     {this.state.signupFormVisible ? (
                         <form id="registerForm" onSubmit={this.register}>
-                            <h2>Register</h2>
+                            {/* <h2>Register</h2> */}
                             <div className="form-field">
                                 <label htmlFor="registerEmail">Email:</label>
                                 <input name="registerEmail" type="text" required />
@@ -42,11 +42,11 @@ class Loginregister extends Component {
                                 <label htmlFor="registerPassword">Password:</label>
                                 <input name="registerPassword" type="password" required />
                             </div>
-                            <button type="submit">Register</button>
+                            <button className="submitbuttons" type="submit">Register</button>
                         </form>
                     ) : (
                         <form id="loginForm" onSubmit={this.login}>
-                            <h2>Login</h2>
+                            {/* <h2>Login</h2> */}
                             <div className="form-field">
                                 <label htmlFor="username">Username:</label>
                                 <input name="username" type="text" required />
@@ -55,7 +55,7 @@ class Loginregister extends Component {
                                 <label htmlFor="password">Password:</label>
                                 <input name="password" type="password" required />
                             </div>
-                            <button type="submit">Login</button>
+                            <button className="submitbuttons" type="submit">Login</button>
                         </form>
                     )}
                 </div>

@@ -6,7 +6,7 @@ import Gallery from './Gallery';
 import UserRemixGallery from './UserRemixGallery';
 import ImageRemixHistory from './ImageRemixHistory';
 import Loginregisterpage from './Loginregisterpage';
-import Sendemail from './Sendemail';
+import About from './About';
 //import Uploadbutton from './Uploadbutton';
 
 class App extends Component {
@@ -21,6 +21,7 @@ class App extends Component {
               <Link to="/Gallery">Gallery</Link>
               <Link to="/UserRemixGallery">Remixes</Link>
               <Link to="/Loginregisterpage">Login</Link>
+              <Link to="/About">About</Link>
           </div>
         </header>
 
@@ -30,7 +31,7 @@ class App extends Component {
               <Route exact path="/UserRemixGallery" component={UserRemixGallery} />
               <Route exact path="/gallery/:id" component={ImageRemixHistory} />
               <Route exact path="/Loginregisterpage" component={Loginregisterpage} />
-              <Route exact path="/Sendemail" component={Sendemail} />
+              <Route exact path="/About" component={About} />
               <Route exact path="/" component={Gallery} />
             </Switch>
         </div>
