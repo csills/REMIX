@@ -5,8 +5,9 @@ import './App.css';
 import './Gallery.css';
 
 
-// Array with URLs for Gallery Images
+/// Array with URLs for Gallery Images
 // We need to pull this data in from database eventually using axios
+/*
 let imgUrls = [
   'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg',
   'https://culturehog.com/wp-content/uploads/best-parodies.jpg',
@@ -21,10 +22,14 @@ let imgUrls = [
   'https://source.unsplash.com/WGJkReFcj1k/800x600',
   'https://source.unsplash.com/-hI5dX2ObAs/800x600'
  ];
+ */
+ 
 
 //  Component for gallery images
 class GalleryImages extends Component {
 
+  /*
+// Render using image array provided at the beginning of this file
   render() {
     return(
       <Link to="/ImageRemixHistory">
@@ -33,34 +38,40 @@ class GalleryImages extends Component {
     );
   }
 }
+*/
+
+// Render connecting to database
+  render() {
+    return(
+      <Link to={`/gallery/${this.props.galleryid}`}>
+        <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
+      </Link>
+    );
+  }
+}
+
 
 // This is where all Gallery Images are displayed
 class Gallery extends Component{
-  // Is this constructor necessary?
   constructor(props) {
     super(props);
     
     this.state = {
       remixTagLine: "A space to create and re-create.",
       url: '',
-      //gallery: []
+      galleries: []
     };
   }
 
-  /*
-    componentDidMount() {
-      // use axios.get to fill the imgUrls array with all Gallery images??
-      let imgUrls = [];
-
-      axios.get('/routes/api/gallery')
-        .then(( {data} ) => {
-
-          this.setState({ gallery:data });
-          console.log(data);
-        })
-    }
-  */
-    
+  
+  componentDidMount() {
+    // use axios.get to fill Gallery with gallery images:
+    axios.get('/api/galleries')
+      .then(( {data} ) => {
+        this.setState({ galleries: data });
+        console.log(data);
+      })
+  }
 
   
   render() {
@@ -76,11 +87,13 @@ class Gallery extends Component{
         <div refs='gallery-container' className='container-fluid gallery-container'>
           <div className='row'>
             {
-              imgUrls.map((url, index) => {
-              //this.state.gallery.map((url, index) => {
+              //imgUrls.map((url, index) => {
+              this.state.galleries.map((gallery, index) => {
                 return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                     <div className='gallery-card'>
-                      <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={url} alt={'Image number ' + (index + 1)} />  
+                      {/* First line of code for img Array in file, Second line calls to database */}
+                      {/* <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={url} alt={'Image number ' + (index + 1)} /> */}
+                      <GalleryImages className='gallery-thumbnail' a href='/ImageRemixGallery' src={gallery.filepath} alt={'Image number ' + (index + 1)} galleryid={gallery.id} />
                     </div>
                 </div>
               })

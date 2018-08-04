@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
 import './UserRemixGallery.css';
 
 
 // Array with URLs for User Remix Gallery Images
 let imgUrls = [
-    'http://img.over-blog-kiwi.com/0/84/27/39/20140506/ob_04cca0_1901994-809625892384301-54454870-n.jpg',
-    'https://source.unsplash.com/hKU5dmGfSKY/800x600',
-    'https://source.unsplash.com/PRwcKlZDpc0/800x600'
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-02.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-12.jpg',
+    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-32.jpg',
   ];
 
 
@@ -38,8 +38,7 @@ class UserRemixGallery extends Component {
         return (
         <div>
             <div className="UserRemix">
-                <h1 className="UserName">"User's Name" Remix Gallery</h1>
-                {<Link to="/Gallery">Main Gallery</Link> }
+                <h1 className="UserName">Crystal's Remix Gallery</h1>
             </div>
 
             <div refs='gallery-container' className='container-fluid gallery-container'>
