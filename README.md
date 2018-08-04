@@ -1,7 +1,7 @@
 <h1 align="center"> REMIX </h1> <br>
 <p align="center">
   <a href="https://dc-remix.herokuapp.com/">
-    <img alt="Remix" title="Remix" src="./client/src/Remix-Logo.jpg" width="450">
+    <img alt="Remix" title="Remix" src="https://dc-remix.herokuapp.com/static/media/Remix-Logo.ddb31945.jpg" width="450">
   </a>
 </p>
 
@@ -38,12 +38,9 @@ A few of the things you can do with REMIX:
 
 
 <p align="center">
-  <img src = "http://i.imgur.com/IkSnFRL.png" width=700>
+  <img alt="Index" title="Index" src="./client/src/index.jpg" width="700">
 </p>
 
-<p align="center">
-  <img src = "http://i.imgur.com/0iorG20.png" width=700>
-</p>
 
 ## Installation
 
