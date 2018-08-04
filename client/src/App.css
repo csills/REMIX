@@ -80,7 +80,7 @@
   text-transform: uppercase;
 }
 
-.submitbuttons {
+.submitbuttons, .downloadButton, .uploadButton {
   color: black;
   background-color:white;
   border-color:rgb(0, 0, 0);
@@ -136,4 +136,13 @@ buttons:disabled {
   background-color: white;
   border-color:white;
   text-transform: uppercase;
+}
+
+.about {
+  margin-top: 10%;
+}
+
+.card {
+  margin: auto;
+  margin-bottom: 70px;
 }
