@@ -53,9 +53,6 @@ class ImageRemixHistory extends Component {
             console.log('image uploaded to database')
     }
     */
-
-<<<<<<< HEAD
-=======
     
     componentDidMount() {
       // use axios.get to get all remixes associated with the selected Gallery Image:
@@ -68,7 +65,6 @@ class ImageRemixHistory extends Component {
     }
   
 
->>>>>>> f9760a84f141ec0df9e615441cd8300bf9bd54e8
 
     render() {
         return  (
@@ -93,13 +89,8 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-<<<<<<< HEAD
-                            <button onClick={() => this.fileInput.click()}>Choose Image URL</button>
-                            <button onClick={this.fileUploadHandler}>Upload</button>
-=======
                             <button onClick={() => this.fileInput.click()}>Insert Remix Image URL</button>
                             <button onClick={this.fileUploadHandler}>Upload Remix</button>
->>>>>>> f9760a84f141ec0df9e615441cd8300bf9bd54e8
                         </div>
                     </div>
                 </div>
