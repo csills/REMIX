@@ -90,9 +90,9 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            <input name="registerEmail" value="Insert Remix Image URL" type="text" required />
+                            Insert Remix Image URL: <input name="registerEmail" type="text" required size="50" /> 
                             {/* <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button> */}
-                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix Image URL</button>
+                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload URL</button>
                         </div>
                     </div>
                 </div>
