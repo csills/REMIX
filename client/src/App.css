@@ -24,16 +24,19 @@
 
 .user-form .login-form {
   color: black;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .navbar a {
   color: #000000;
   margin: 5px;
+  margin-right: 20px;
 }
 
 .navbar a:hover {
   color: grey;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .navbar a:active {
@@ -52,5 +55,23 @@
 .EmailDescription {
   color: black;
   padding-top: 100px;
+}
+
+button {
+    color: black;
+    background-color:white;
+    border-color:rgb(0, 0, 0);
+}
+
+button:hover {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-color:rgb(0, 0, 0);
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 

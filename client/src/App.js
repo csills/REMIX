@@ -32,10 +32,10 @@ class App extends Component {
         <header className="App-header">
           <img src={remixLogo} className="App-logo" alt="logo" />
           <div className="navbar">
-              <Link to="/Gallery">Gallery</Link>
-              <Link to="/UserRemixGallery">Remixes</Link>
-              <Link to="/Loginregisterpage">Login</Link>
-              <Link to="/Sendemail">Email</Link>
+              <Link to="/Gallery">GALLERY</Link>
+              <Link to="/UserRemixGallery">REMIXES</Link>
+              <Link to="/Loginregisterpage">LOGIN</Link>
+              <Link to="/Sendemail">EMAIL</Link>
           </div>
         </header>
 

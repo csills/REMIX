@@ -20,42 +20,42 @@ class Loginregister extends Component {
         <div className="login-form">
             {this.state.user ? (
                 <div className="user">
-                    <span className="email">Email: {this.state.user.email}</span>
+                    <h1 className="username">Hello,  {this.state.user.username}</h1>
                     <button onClick={this.logout}>Log Out</button>
                 </div>
             ) : (
                 <div className="user-form">
-                    <button onClick={this.showSignupForm} disabled={this.state.signupFormVisible}>Register</button>
-                    <button onClick={this.showLoginForm} disabled={!this.state.signupFormVisible}>Login</button>
+                    <button onClick={this.showSignupForm} disabled={this.state.signupFormVisible}>REGISTER</button>
+                    <button onClick={this.showLoginForm} disabled={!this.state.signupFormVisible}>LOGIN</button>
                     {this.state.signupFormVisible ? (
                         <form id="registerForm" onSubmit={this.register}>
                             <h2>Register</h2>
                             <div className="form-field">
-                                <label htmlFor="registerEmail">Email:</label>
+                                <label htmlFor="registerEmail">EMAIL :</label>
                                 <input name="registerEmail" type="text" required />
                             </div>
                             <div className="form-field">
-                                <label htmlFor="registerUsername">Username:</label>
+                                <label htmlFor="registerUsername">USERNAME :</label>
                                 <input name="registerUsername" type="text" required />
                             </div>
                             <div className="form-field">
-                                <label htmlFor="registerPassword">Password:</label>
+                                <label htmlFor="registerPassword">PASSWORD :</label>
                                 <input name="registerPassword" type="password" required />
                             </div>
-                            <button type="submit">Register</button>
+                            <button type="submit">REGISTER</button>
                         </form>
                     ) : (
                         <form id="loginForm" onSubmit={this.login}>
-                            <h2>Login</h2>
+                            <h2>LOGIN</h2>
                             <div className="form-field">
-                                <label htmlFor="username">Username:</label>
+                                <label htmlFor="username">USERNAME:    </label>
                                 <input name="username" type="text" required />
                             </div>
                             <div className="form-field">
-                                <label htmlFor="password">Password:</label>
+                                <label htmlFor="password">PASSWORD:    </label>
                                 <input name="password" type="password" required />
                             </div>
-                            <button type="submit">Login</button>
+                            <button type="submit">LOGIN</button>
                         </form>
                     )}
                 </div>
