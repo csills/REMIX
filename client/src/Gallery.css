@@ -31,6 +31,15 @@ body {
   height: 300px; /* adjust height of thumbnail here */
 }
 
+.remixImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  width: 700px; /* adjust width of thumbnail here */
+  height: 700px; /* adjust height of thumbnail here */
+  margin-top: 50px;
+}
+
 .card-icon-open {
   display: block;
   position: absolute;

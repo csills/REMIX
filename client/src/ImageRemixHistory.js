@@ -72,8 +72,10 @@ class ImageRemixHistory extends Component {
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     <div className='imageDownloadBox'>
-                        {/* <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/> */}
-                        <img className='img-responsive center-block img-rounded' src= {this.state.gallery.filepath} alt={this.props.alt}/>
+                        <div className='gallery-card'>
+                            {/* <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/> */}
+                            <img className='remixImage' src= {this.state.gallery.filepath} alt={this.props.alt}/>
+                        </div>
                         <br/>
                         <br/>
                         <div className='downloadButton'>
