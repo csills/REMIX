@@ -79,7 +79,7 @@ class ImageRemixHistory extends Component {
                         <br/>
                         <div className='downloadButton'>
                             <a href={this.state.gallery.filepath} download>
-                            <button>Download This Photo</button>
+                            <button className="submitbuttons" >Download This Photo</button>
                             </a>
                         </div>
                         <br/>
@@ -90,8 +90,8 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            <button onClick={() => this.fileInput.click()}>Insert Remix Image URL</button>
-                            <button onClick={this.fileUploadHandler}>Upload Remix</button>
+                            <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button>
+                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix</button>
                         </div>
                     </div>
                 </div>
