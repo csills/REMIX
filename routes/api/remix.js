@@ -1,32 +1,30 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 const models = require('../../models');
 
-// Check to make sure router is set to render to localhost
-router.get('/', function(req, res, next) {
-    res.json({});
-  });
+//this is where we need to GET POST ADD
+//When someone clicks the Upload or Download button
+//See Full-Stack Counter exercise Step 5 (#4-7) - Build out the counter API
 
 
-// GET all of the Remixes for a Gallery Image
 router.get('/', function(req, res, next) {
-    models.Remixes.findAll({
+    models.Remix.findAll({
         where: {
-            GalleryId: req.galleryId,
-            filepath: req.body.filepath
+            UserId: req.user,
         },
         include: [
-            models.Galleries,
+            models.Remix,
         ]
     })
 
-// RENDER the Remixes to ImageRemixHistory page
+// RENDER the Users remixes
     .then(remixes => {
-        res.render('remixes', {
-            title: 'Image Remix History',
+        res.render('remix', {
+            title: 'Remixes',
             remixes: remixes,
         });
     })
 });
+
 
 module.exports = router;
