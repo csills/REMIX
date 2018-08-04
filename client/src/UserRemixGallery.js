@@ -9,6 +9,10 @@ let imgUrls = [
     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-02.jpg',
     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-12.jpg',
     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-32.jpg',
+    'https://culturehog.com/wp-content/uploads/best-parodies-01.jpg',
+    'https://culturehog.com/wp-content/uploads/best-parodies-03.jpg',
+    'https://culturehog.com/wp-content/uploads/best-parodies-04.jpg',
+    'https://culturehog.com/wp-content/uploads/best-parodies-06.jpg'
   ];
 
 
