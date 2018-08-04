@@ -38,27 +38,27 @@ A few of the things you can do with REMIX:
 
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/gallery.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/gallery.jpg" width="700">
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/galleryid.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/galleryid.jpg" width="700">
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/gallerywithremixes.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/gallerywithremixes.jpg" width="700">
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/userremixhistory.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/userremixhistory.jpg" width="700">
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/login.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/login.jpg" width="700">
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/about.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/about.jpg" width="700">
 </p>
 
 ## Installation
