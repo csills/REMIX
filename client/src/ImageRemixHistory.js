@@ -105,10 +105,10 @@ class ImageRemixHistory extends Component {
                 <div className='row'>
                     {
                         //imgUrls.map((url, index) => {
-                        this.state.gallery.Remixes.map((url, index) => {
+                        this.state.gallery.Remixes.map((remix, index) => {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
-                                    <ImageRemixHistoryImages className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
+                                    <ImageRemixHistoryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
                                     {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>
