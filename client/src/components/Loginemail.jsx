@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 class Loginregister extends Component {
 
@@ -115,7 +116,7 @@ class Loginregister extends Component {
             console.log(res);
         })
         .catch((res) => {
-            console.log(res);
+            swal("Incorrect Login", "...please try again!");
         });
     }
 
