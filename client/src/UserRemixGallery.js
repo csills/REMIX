@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import './UserRemixGallery.css';
 
-
+// Hardcode for testing purposes:
 // Array with URLs for User Remix Gallery Images
 let imgUrls = [
     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
@@ -15,7 +15,7 @@ let imgUrls = [
     'https://culturehog.com/wp-content/uploads/best-parodies-06.jpg'
   ];
 
-
+  // Component for User's Gallery that contains their individual remix submissions
   class UserRemixGalleryImages extends Component {
 
     render() {
@@ -26,7 +26,7 @@ let imgUrls = [
   }
 
 
-//This is where a User can see all images they have Remixed and/or Downloaded
+//This is where a User can see all images they have submitted as Remixes
 class UserRemixGallery extends Component {
     constructor(props) {
         super(props);

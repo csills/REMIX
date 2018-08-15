@@ -4,8 +4,8 @@ import axios from 'axios';
 import './App.css';
 import './Gallery.css';
 
-
-/// Array with URLs for Gallery Images
+// Hardcode for testing purposes:
+// Array with URLs for Gallery Images
 // We need to pull this data in from database eventually using axios
 /*
 let imgUrls = [

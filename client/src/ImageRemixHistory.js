@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './ImageRemixHistory.css';
 
+// Hardcode for testing purposes:
 //let image = 'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg'
 /*
 let imgUrls = [
@@ -73,7 +74,6 @@ class ImageRemixHistory extends Component {
                 <div className='row'>
                     <div className='imageDownloadBox'>
                         <div className='gallery-card'>
-                            {/* <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/> */}
                             <img className='remixImage' src= {this.state.gallery.filepath} alt={this.props.alt}/>
                         </div>
                         <br/>
@@ -91,9 +91,9 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            Insert Remix Image URL: <input name="registerEmail" type="text" required size="50" /> 
+                            Insert Remix Image URL: <input name="remixImage" type="text" required size="50" /> 
                             {/* <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button> */}
-                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload URL</button>
+                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix URL</button>
                         </div>
                     </div>
                 </div>
@@ -106,12 +106,12 @@ class ImageRemixHistory extends Component {
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     {
-                        //imgUrls.map((url, index) => {
+                        // Hardcode for testing purposes: 
+                        // imgUrls.map((url, index) => {
                         this.state.gallery.Remixes.map((remix, index) => {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
                                     <ImageRemixHistoryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
-                                    {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>
                         })
