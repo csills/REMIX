@@ -11,6 +11,7 @@ const cors = require('cors');
 dotenv.load();
 
 const apiRemixRouter = require('./routes/api/remix');
+const apiUserRemixRouter = require('./routes/api/userremix');
 const apiGalleryRouter = require('./routes/api/gallery');
 const apiGalleriesRouter = require('./routes/api/galleries');
 const setupAuth = require('./auth');
@@ -48,6 +49,7 @@ app.post('/upload', (req, res, next) => {
 })
 
 app.use('/api/remix', apiRemixRouter);
+app.use('/api/userremix', apiUserRemixRouter);
 app.use('/api/gallery', apiGalleryRouter);
 app.use('/api/galleries', apiGalleriesRouter);
 
