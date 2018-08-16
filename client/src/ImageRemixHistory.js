@@ -39,7 +39,7 @@ class ImageRemixHistory extends Component {
         };
     }
 
-    /* Handling the upload Button:
+    // Handling the upload Button:
     fileSelectedHandler = event => {
         this.setState({
             selectedFile: event.target.files[0]
@@ -49,10 +49,10 @@ class ImageRemixHistory extends Component {
     fileUploadHandler = () => {
         const fd = new FormData();
         fd.append('remixImages', this.state.selectedFile, this.state)
-        axios.post(//send upload to Remix Database, Remix Table include filepath?)
+        axios.post(`/api/remix/`)//send upload to Remix Database, Remix Table filepath?
             console.log('image uploaded to database')
     }
-    */
+    
     
     componentDidMount() {
       // use axios.get to get all remixes associated with the selected Gallery Image:
@@ -111,7 +111,6 @@ class ImageRemixHistory extends Component {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
                                     <ImageRemixHistoryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
-                                    {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>
                         })

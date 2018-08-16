@@ -43,8 +43,10 @@ class UserRemixGallery extends Component {
     render() {
         return  (
         <div>
+            <div className="UserRemix">
+                <h1 className="UserName">My Remix History</h1>
+            </div>
 
-            <h1>My Remix History</h1>
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     {
@@ -68,6 +70,7 @@ class UserRemixGallery extends Component {
 export default UserRemixGallery;
 
 
+// Original Hardcode to test User Remix Gallery functionality:
 // Array with URLs for User Remix Gallery Images
 // let imgUrls = [
 //     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
