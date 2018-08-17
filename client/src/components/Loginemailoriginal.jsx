@@ -1,36 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
-import UserRemixGallery from '../UserRemixGallery';
-// import UserButtons from '../UserButtons';
 
 class Loginregister extends Component {
 
     constructor(props) {
         super(props);
 
-        // this.login = this.login.bind(this);
+        this.login = this.login.bind(this);
         this.logout = this.logout.bind(this);
 
         this.state = {
-            user: [],
+            user: null,
             signupFormVisible: false,
         };
     }
 
     render() {
         return (
-            
         <div className="login-form">
             {this.state.user ? (
-                <div className="user" onSubmit={this.showProfile}>
-                    {/* <h1 className="hello">HELLO {this.state.user.username}</h1>
-                    <h1 className="hello"></h1> */}
-                    <UserRemixGallery/>
-                    {/* <UserButtons/> */}
-                    <button onClick={this.logout}>{this.ifDisplay()}</button>
-                    {/* <button className="submitbuttons" onClick={this.logout}> I'm button </button> */}
-                    {/* <button className="submitbuttons" onClick={this.logout}>Log Out</button> */}
+                <div className="user">
+                    <h1 className="hello">Hello, {this.state.user.username}</h1>
+                    <h1 className="hello">User ID, {this.state.user.id}</h1>
+                    
+                    <button className="submitbuttons" onClick={this.logout}>Log Out</button>
                 </div>
             ) : (
                 <div className="user-form">
@@ -71,20 +65,6 @@ class Loginregister extends Component {
             )
             }
         </div>
-        );
-    }
-
-    ifDisplay = (res) => {
-        const loggedUserId = this.state.user.id;
-        console.log(loggedUserId);
-        // once user logs in, log out button remain until the user clicks log out
-        if (isNaN(loggedUserId)) {
-            return (
-                'Login'
-            );
-        }
-        return (
-            'Logout'
         );
     }
 
@@ -137,7 +117,7 @@ class Loginregister extends Component {
                 user: res.data.user,
                 showSignupForm: false,
             })
-            // console.log(res);
+            console.log(res);
         })
         .catch((res) => {
             console.log(res);
