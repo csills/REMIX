@@ -13,4 +13,7 @@ router.get('/:galleryId', function(req, res, next) {
     })
 });
 
+//add router.post to remix database table
+    //models.Remixes.create
+
 module.exports = router;

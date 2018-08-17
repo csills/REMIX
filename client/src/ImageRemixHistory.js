@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import './ImageRemixHistory.css';
 
+// Hardcode for testing purposes:
 //let image = 'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg'
 /*
 let imgUrls = [
@@ -33,13 +34,16 @@ class ImageRemixHistory extends Component {
 
         this.state = {
             url: '',
+            //selectedFile: null,
             gallery: {
                 Remixes: [],
             },
         };
     }
 
-    /* Handling the upload Button:
+    // Handling the upload Button:
+    // See routes/api/remix.js --- we need to add a router.post to handle
+    // when a user clicks the "upload button" to upload the URL of a new Remix Image
     fileSelectedHandler = event => {
         this.setState({
             selectedFile: event.target.files[0]
@@ -48,11 +52,14 @@ class ImageRemixHistory extends Component {
 
     fileUploadHandler = () => {
         const fd = new FormData();
-        fd.append('remixImages', this.state.selectedFile, this.state)
-        axios.post(//send upload to Remix Database, Remix Table include filepath?)
+        fd.append('remixImages', this.state.selectedFile, this.state.selectedFile.name);
+        axios.post(`/api/remix/`, fd)//send upload to Remix Database, Remix Table filepath?
+            .then(res => {
+                console.log(res);
+            });
             console.log('image uploaded to database')
     }
-    */
+    
     
     componentDidMount() {
       // use axios.get to get all remixes associated with the selected Gallery Image:
@@ -73,7 +80,6 @@ class ImageRemixHistory extends Component {
                 <div className='row'>
                     <div className='imageDownloadBox'>
                         <div className='gallery-card'>
-                            {/* <img className='img-responsive center-block img-rounded' src= {image} alt={this.props.alt}/> */}
                             <img className='remixImage' src= {this.state.gallery.filepath} alt={this.props.alt}/>
                         </div>
                         <br/>
@@ -91,9 +97,10 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            Insert Remix Image URL: <input name="registerEmail" type="text" required size="50" /> 
+                            Insert Remix Image URL: <input name="remixImage" type="text" required size="50" />
+                            <button onClick={() => this.fileInput.click()}>Pick File </button>
                             {/* <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button> */}
-                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload URL</button>
+                            <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix URL</button>
                         </div>
                     </div>
                 </div>
@@ -106,12 +113,12 @@ class ImageRemixHistory extends Component {
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     {
-                        //imgUrls.map((url, index) => {
+                        // Hardcode for testing purposes: 
+                        // imgUrls.map((url, index) => {
                         this.state.gallery.Remixes.map((remix, index) => {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
                                     <ImageRemixHistoryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
-                                    {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>
                         })

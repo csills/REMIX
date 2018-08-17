@@ -4,8 +4,8 @@ import axios from 'axios';
 import './App.css';
 import './Gallery.css';
 
-
-/// Array with URLs for Gallery Images
+// Hardcode for testing purposes:
+// Array with URLs for Gallery Images
 // We need to pull this data in from database eventually using axios
 /*
 let imgUrls = [
@@ -78,7 +78,7 @@ class Gallery extends Component{
     return(
       
       <div>
-        <div>
+        <div >
           <p className="App-intro">
           <h2>{this.state.remixTagLine}</h2>
           Remix culture, sometimes read-write culture, is a society that allows and encourages derivative works by combining or editing existing materials to produce a new creative work or product.
