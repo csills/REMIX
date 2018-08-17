@@ -76,6 +76,7 @@ class Gallery extends Component{
   
   render() {
     return(
+      
       <div>
         <div >
           <p className="App-intro">

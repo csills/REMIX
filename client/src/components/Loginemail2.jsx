@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
 import UserRemixGallery from '../UserRemixGallery';
-// import UserButtons from '../UserButtons';
+import UserButtons from '../UserButtons';
 
 class Loginregister extends Component {
 
@@ -28,8 +28,8 @@ class Loginregister extends Component {
                     <h1 className="hello"></h1> */}
                     <UserRemixGallery/>
                     {/* <UserButtons/> */}
-                    <button onClick={this.logout}>{this.ifDisplay()}</button>
-                    {/* <button className="submitbuttons" onClick={this.logout}> I'm button </button> */}
+                    {this.ifDisplay()}
+                    <button className="submitbuttons" onClick={this.logout}> I'm button </button>
                     {/* <button className="submitbuttons" onClick={this.logout}>Log Out</button> */}
                 </div>
             ) : (
@@ -76,15 +76,13 @@ class Loginregister extends Component {
 
     ifDisplay = (res) => {
         const loggedUserId = this.state.user.id;
-        console.log(loggedUserId);
-        // once user logs in, log out button remain until the user clicks log out
         if (isNaN(loggedUserId)) {
             return (
-                'Login'
+                'Please click a button to Login or Register'
             );
         }
         return (
-            'Logout'
+            'Please click button to Logout'
         );
     }
 
