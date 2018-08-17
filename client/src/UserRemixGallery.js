@@ -3,7 +3,6 @@ import './App.css';
 import axios from 'axios';
 import './UserRemixGallery.css';
 
-
 class UserRemixGalleryImages extends Component {
 
     render() {
