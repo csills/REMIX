@@ -22,6 +22,8 @@ class Loginregister extends Component {
             {this.state.user ? (
                 <div className="user">
                     <h1 className="hello">Hello, {this.state.user.username}</h1>
+                    <h1 className="hello">User ID ID, {this.state.user.id}</h1>
+                    
                     <button className="submitbuttons" onClick={this.logout}>Log Out</button>
                 </div>
             ) : (
@@ -95,8 +97,8 @@ class Loginregister extends Component {
             })
             .catch((res) => {
                 console.log(res);
-                {/* Is there where alert box would go for failed registration?
-                swal("Registration Failed", "...please try again!");*/}
+                // Is there where alert box would go for failed registration?
+                swal("Registration Failed", "...please try again!");
             });
     }
 
@@ -119,8 +121,8 @@ class Loginregister extends Component {
         })
         .catch((res) => {
             console.log(res);
-            {/* Is there where alert box would go for failed login?
-            swal("Incorrect Login", "...please try again!");*/}
+            // Is there where alert box would go for failed login?
+            swal("Incorrect Login", "...please try again!");
         });
     }
 

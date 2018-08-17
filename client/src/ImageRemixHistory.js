@@ -34,13 +34,16 @@ class ImageRemixHistory extends Component {
 
         this.state = {
             url: '',
+            //selectedFile: null,
             gallery: {
                 Remixes: [],
             },
         };
     }
 
-    /* Handling the upload Button:
+    // Handling the upload Button:
+    // See routes/api/remix.js --- we need to add a router.post to handle
+    // when a user clicks the "upload button" to upload the URL of a new Remix Image
     fileSelectedHandler = event => {
         this.setState({
             selectedFile: event.target.files[0]
@@ -49,11 +52,14 @@ class ImageRemixHistory extends Component {
 
     fileUploadHandler = () => {
         const fd = new FormData();
-        fd.append('remixImages', this.state.selectedFile, this.state)
-        axios.post(//send upload to Remix Database, Remix Table include filepath?)
+        fd.append('remixImages', this.state.selectedFile, this.state.selectedFile.name);
+        axios.post(`/api/remix/`, fd)//send upload to Remix Database, Remix Table filepath?
+            .then(res => {
+                console.log(res);
+            });
             console.log('image uploaded to database')
     }
-    */
+    
     
     componentDidMount() {
       // use axios.get to get all remixes associated with the selected Gallery Image:
@@ -91,7 +97,8 @@ class ImageRemixHistory extends Component {
                             type='file' 
                             onChange={this.fileSelectedHandler} 
                             ref={fileInput => this.fileInput = fileInput}/>
-                            Insert Remix Image URL: <input name="remixImage" type="text" required size="50" /> 
+                            Insert Remix Image URL: <input name="remixImage" type="text" required size="50" />
+                            <button onClick={() => this.fileInput.click()}>Pick File </button>
                             {/* <button className="submitbuttons" onClick={() => this.fileInput.click()}>Insert Remix Image URL</button> */}
                             <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix URL</button>
                         </div>
