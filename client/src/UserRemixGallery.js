@@ -86,21 +86,21 @@ export default UserRemixGallery;
 //   class UserRemixGalleryImages extends Component {
 
 
-    logout = () => {
-        axios({
-            method: 'get',
-            url: '/auth/logout'
-        })
-        .then(() => {
-            this.setState({
-                user: null,
-            })
-        })
-        .catch((res) => {
-            console.log(res);
-        });
-    }
-}
+//     logout = () => {
+//         axios({
+//             method: 'get',
+//             url: '/auth/logout'
+//         })
+//         .then(() => {
+//             this.setState({
+//                 user: null,
+//             })
+//         })
+//         .catch((res) => {
+//             console.log(res);
+//         });
+//     }
 
-export default UserRemixGallery;
+
+// export default UserRemixGallery;
 
