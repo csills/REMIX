@@ -15,6 +15,7 @@ class Loginregister extends Component {
         this.state = {
             user: [],
             signupFormVisible: false,
+            // isLoggedIn: '',
         };
     }
 
@@ -28,7 +29,7 @@ class Loginregister extends Component {
                     <h1 className="hello"></h1> */}
                     <UserRemixGallery/>
                     {/* <UserButtons/> */}
-                    <button onClick={this.logout}>{this.ifDisplay()}</button>
+                    <button onClick={this.logout}>{this.ifDisplay()} button</button>
                     {/* <button className="submitbuttons" onClick={this.logout}> I'm button </button> */}
                     {/* <button className="submitbuttons" onClick={this.logout}>Log Out</button> */}
                 </div>
@@ -74,19 +75,89 @@ class Loginregister extends Component {
         );
     }
 
+// V_01
+
     ifDisplay = (res) => {
-        const loggedUserId = this.state.user.id;
-        console.log(loggedUserId);
-        // once user logs in, log out button remain until the user clicks log out
-        if (isNaN(loggedUserId)) {
-            return (
-                'Login'
-            );
-        }
-        return (
-            'Logout'
-        );
+        axios.get(`/api/user/`)
+        .then(( {data} ) => {
+            console.log(data.user)
+            if (data.user !== null) {
+                console.log('Logout');
+                // return (<h2>'Logout'</h2>)
+                // this.setState({
+                //     isLoggedIn: 'Logout',
+                // })
+                
+            } else {
+                console.log('Login');
+                // return  (<h2>'Login'</h2>)
+                // this.setState({
+                //     isLoggedIn: 'Login',
+                // }) 
+            }
+        })
     }
+
+// ===========================================================
+// V_02
+
+    // logoutButton = (event) => {
+    //     this.setState({
+    //         isLoggedIn: true
+    //     })
+    // }
+
+    // loginButton = (event) => {
+    //     this.setState({
+    //         isLoggedIn: false
+    //     })
+    // }
+
+    // ifLoggedin = (event) => {
+    //     event.preventDefault();
+    //     axios({
+    //         method: 'get',
+    //         url: '/api/user',
+    //         data: {
+    //             user: this.user.username
+    //         }
+    //     })
+    //     .then(({data}) => {
+    //         this.logoutButton();
+    //     })
+    //     .catch((res) => {
+    //         console.log(res)
+    //     })
+    // }
+
+// ===========================================================
+// V_03
+
+    // ifDisplay = (res) => {
+    //     axios.get(`/api/user/`)
+    //     .then(( {data} ) => {
+    //         console.log(data.user)
+            
+    //     })
+    // }
+
+// ===========================================================     
+// V_04
+
+
+    // ifDisplay = (res) => {
+    //     const loggedUserId = this.state.user.id;
+    //     console.log(loggedUserId);
+    //     // once user logs in, log out button remain until the user clicks log out
+    //     if (isNaN(loggedUserId)) {
+    //         return (
+    //             'Login'
+    //         );
+    //     }
+    //     return (
+    //         'Logout'
+    //     );
+    // }
 
     showLoginForm = (event) => {
         this.setState({
