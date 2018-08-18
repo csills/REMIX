@@ -19,14 +19,16 @@ router.get('/:galleryId', function(req, res, next) {
 router.post('/', function(req, res, next) {
     models.Remixes.create({
         where: {
-            filepath: req.params.filepath,
-            GalleryID: req.params.galleryId,
+            filepath: req.body.fileUrl,
+            //GalleryID: 1,//req.params.galleryId, (not sure how to call galleryID)
             UserId: req.user,
         }
-        .then(remixes => {
-            res.json(remixes);
-        })
-    });
+    })
+    .then(remixes => {
+        res.json(remixes);
+    })
+    
+
 
 
 })
