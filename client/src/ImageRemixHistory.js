@@ -52,9 +52,8 @@ class ImageRemixHistory extends Component {
 
     fileUploadHandler = () => {
         const fd = new FormData();
-    fd.append('remixImageUpload', this.state.selectedFile, /*this.state.selectedFile.name*/);
-        // should name above be filepath?
-        axios.post(`/api/remix`, fd)//send upload to Remix Database, Remix Table filepath URL
+        fd.append('remixImages', this.state.selectedFile, /*this.state.selectedFile.name*/);
+        axios.post(`/api/remix/`, fd)//send upload to Remix Database, Remix Table filepath?
             .then(res => {
                 console.log(res);
             });
