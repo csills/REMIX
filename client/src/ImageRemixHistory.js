@@ -45,15 +45,14 @@ class ImageRemixHistory extends Component {
     // See routes/api/remix.js --- we need to add a router.post to handle
     // when a user clicks the "upload button" to upload the URL Filepath of a new Remix Image
     fileSelectedHandler = event => {
+        console.log(event.target.value)
         this.setState({
-            selectedFile: event.target.files[0]
+            selectedFile: event.target.value
         })
     }
 
     fileUploadHandler = () => {
-        const fd = new FormData();
-        fd.append('remixImages', this.state.selectedFile, /*this.state.selectedFile.name*/);
-        axios.post(`/api/remix/`, fd)//send upload to Remix Database, Remix Table filepath?
+        axios.post(`/api/remix/`, {fileUrl: this.state.selectedFile})//send upload to Remix Database, Remix Table filepath?
             .then(res => {
                 console.log(res);
             });
@@ -94,8 +93,8 @@ class ImageRemixHistory extends Component {
                             <input 
                             style={{display: 'none'}} 
                             type='file' 
-                            onChange={this.fileSelectedHandler}/>
-                            Insert Remix Image URL: <input name="remixImageUpload" type="text" required size="50" />
+                            onChange={this.fileSelectedHandler.bind(this)}/>
+                            Insert Remix Image URL: <input onChange={this.fileSelectedHandler.bind(this)} name="remixImageUpload" type="text" required size="50" />
                             <button className="submitbuttons" onClick={this.fileUploadHandler}>Upload Remix URL</button>
                         </div>
                     </div>
