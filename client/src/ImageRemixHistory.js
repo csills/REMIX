@@ -52,7 +52,7 @@ class ImageRemixHistory extends Component {
 
     fileUploadHandler = () => {
         const fd = new FormData();
-        fd.append('remixImages', this.state.selectedFile, this.state.selectedFile.name);
+        fd.append('remixImages', this.state.selectedFile, /*this.state.selectedFile.name*/);
         axios.post(`/api/remix/`, fd)//send upload to Remix Database, Remix Table filepath?
             .then(res => {
                 console.log(res);
