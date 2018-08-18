@@ -3,7 +3,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 import remixLogo from './img/Remix-Logo.jpg';
 import Gallery from './Gallery';
-import UserRemixGallery from './UserRemixGallery';
+//import UserRemixGallery from './UserRemixGallery';
 import ImageRemixHistory from './ImageRemixHistory';
 import Loginregisterpage from './Loginregisterpage';
 import About from './About';
