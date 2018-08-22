@@ -17,20 +17,21 @@ router.get('/:galleryId', function(req, res, next) {
 // Also want to make note of the UserId creating the Upload
 // And which GalleryId the remix is attached to:
 router.post('/', function(req, res, next) {
+    console.log(req.body);
+    console.log(req.user);
     models.Remixes.create({
-        where: {
             filepath: req.body.fileUrl,
-            //GalleryID: 1,//req.params.galleryId, (not sure how to call galleryID)
-            UserId: req.user,
-        }
+            GalleryId: req.body.GalleryId,//req.params.galleryId, (not sure how to call galleryID)
+            UserId: req.user
     })
     .then(remixes => {
         res.json(remixes);
     })
+    .catch(function(err) {
+        // print the error details
+    console.log(err);
+    });
     
-
-
-
 })
 
 module.exports = router;

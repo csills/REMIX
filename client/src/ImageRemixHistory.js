@@ -34,7 +34,6 @@ class ImageRemixHistory extends Component {
 
         this.state = {
             url: '',
-            //selectedFile: null,
             gallery: {
                 Remixes: [],
             },
