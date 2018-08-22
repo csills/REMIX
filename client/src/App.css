@@ -26,23 +26,6 @@
   text-transform: uppercase;
   padding-top: 100px;
 }
-/* .user-form a {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 10px;
-  color: gray
-}
-
-.user-form a:hover {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.user-form a:active {
-  color: black;
-  text-transform: uppercase;
-} */
 
 .navbar a {
   color: #000000;
@@ -64,7 +47,7 @@
   text-transform: uppercase;
 }
 
-.App-intro {
+.app-intro {
   width: 50%;
   margin: auto;
 }
