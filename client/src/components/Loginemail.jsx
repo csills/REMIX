@@ -15,8 +15,37 @@ class Loginregister extends Component {
         this.state = {
             user: [],
             signupFormVisible: false,
-            // isLoggedIn: '',
+            isLoggedIn: '',
+            // welcomeMessage: '',
+            // userInfo: []
         };
+
+        console.log(this.state)
+    }
+
+
+    componentDidMount() {
+        axios.get(`/api/user/`)
+        .then(( {data} ) => {
+            // console.log(data.user)
+            if (data.user !== null) {
+                console.log(data.user)
+                console.log('Logout');
+                this.setState({
+                    user: data.user,
+                    isLoggedIn: 'Logout',
+                    // welcomeMessage: 'Hello',
+                    // userInfo: data.user
+                })
+                
+            } else {
+                console.log(data.user)
+                console.log('Login');
+                this.setState({
+                    isLoggedIn: 'Login',
+                }) 
+            }
+        })
     }
 
     render() {
@@ -25,13 +54,13 @@ class Loginregister extends Component {
         <div className="login-form">
             {this.state.user ? (
                 <div className="user" onSubmit={this.showProfile}>
-                    {/* <h1 className="hello">HELLO {this.state.user.username}</h1>
-                    <h1 className="hello"></h1> */}
+                     {/* <h1 className="hello">{this.state.welcomeMessage}{this.state.userInfo.username}</h1>
+                     <h1 className="hello">HELLO {this.state.user}</h1> */}
+                    {/* <h1 className="hello"></h1> */}
                     <UserRemixGallery/>
                     {/* <UserButtons/> */}
-                    <button onClick={this.logout}>{this.ifDisplay()} button</button>
-                    {/* <button className="submitbuttons" onClick={this.logout}> I'm button </button> */}
-                    {/* <button className="submitbuttons" onClick={this.logout}>Log Out</button> */}
+
+                    <button onClick={this.logout}>{this.state.isLoggedIn}</button>
                 </div>
             ) : (
                 <div className="user-form">
@@ -76,6 +105,7 @@ class Loginregister extends Component {
     }
 
 // V_01
+// componentdidmount()
 
     ifDisplay = (res) => {
         axios.get(`/api/user/`)
@@ -207,6 +237,7 @@ class Loginregister extends Component {
             this.setState({
                 user: res.data.user,
                 showSignupForm: false,
+                isLoggedIn: 'Logout',
             })
             // console.log(res);
         })
