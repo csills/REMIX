@@ -1,23 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
-import './ImageRemixHistory.css';
-
-// Hardcode for testing purposes:
-//let image = 'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg'
-/*
-let imgUrls = [
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-02.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-12.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-32.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-27.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-14.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-30.jpg',
-    'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-28.jpg'
-    
-  ];
-*/
+import '../css/App.css';
+import '../css/ImageRemixHistory.css';
 
 class ImageRemixHistoryImages extends Component {
 
@@ -58,7 +42,6 @@ class ImageRemixHistory extends Component {
             });
     }
     
-    
     componentDidMount() {
       // use axios.get to get all remixes associated with the selected Gallery Image:
 
@@ -69,8 +52,6 @@ class ImageRemixHistory extends Component {
       })
     }
   
-
-
     render() {
         return  (
         <div>
@@ -101,7 +82,6 @@ class ImageRemixHistory extends Component {
                 </div>
             </div>
         
-
             {/* This is where all the remixes submitted for an 
                 Indiviual Gallery Image will appear: */}
             <h1>Checkout this Image's Remix History</h1>

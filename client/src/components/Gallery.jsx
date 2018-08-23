@@ -1,44 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './App.css';
-import './Gallery.css';
+import '../css/App.css';
+import '../css/Gallery.css';
 
-// Hardcode for testing purposes:
-// Array with URLs for Gallery Images
-// We need to pull this data in from database eventually using axios
-/*
-let imgUrls = [
-  'http://www.wallpaper.ge/wallpapers/mona_lisa-800x600.jpg',
-  'https://culturehog.com/wp-content/uploads/best-parodies.jpg',
-  'https://source.unsplash.com/WNAccGuvPYU/800x600',
-  'https://source.unsplash.com/E4944K_4SvI/800x600',
-  'https://source.unsplash.com/3Z70SDuYs5g/800x600',
-  'https://source.unsplash.com/01vFmYAOqQ0/800x600',
-  'https://source.unsplash.com/t20pc32VbrU/800x600',
-  'https://source.unsplash.com/pHANr-CpbYM/800x600',
-  'https://source.unsplash.com/3PmwYw2uErY/800x600',
-  'https://source.unsplash.com/uOi3lg8fGl4/800x600',
-  'https://source.unsplash.com/WGJkReFcj1k/800x600',
-  'https://source.unsplash.com/-hI5dX2ObAs/800x600'
- ];
- */
- 
 
-//  Component for gallery images
 class GalleryImages extends Component {
-
-  /*
-// Render using image array provided at the beginning of this file
-  render() {
-    return(
-      <Link to="/ImageRemixHistory">
-        <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
-      </Link>
-    );
-  }
-}
-*/
 
 // Render connecting to database
   render() {
@@ -49,7 +16,6 @@ class GalleryImages extends Component {
     );
   }
 }
-
 
 // This is where all Gallery Images are displayed
 class Gallery extends Component{
@@ -62,7 +28,6 @@ class Gallery extends Component{
       galleries: []
     };
   }
-
   
   componentDidMount() {
     // use axios.get to fill Gallery with gallery images:
@@ -73,7 +38,6 @@ class Gallery extends Component{
       })
   }
 
-  
   render() {
     return(
       

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Loginemail from './components/Loginemail';
-import './Loginregisterpage.css';
+import Loginemail from './Loginemail';
+import '../css/Loginregisterpage.css';
 
 class Loginregisterpage extends Component {
     render() {
