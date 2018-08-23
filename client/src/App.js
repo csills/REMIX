@@ -20,7 +20,7 @@ class App extends Component {
           <div className="navbar">
               <Link to="/Gallery">Gallery</Link>
               {/* <Link to="/UserRemixGallery">Remixes</Link> */}
-              <Link to="/Loginregisterpage">My Remix</Link>
+              <Link to="/Loginregisterpage">Login</Link>
               <Link to="/About">About</Link>
           </div>
         </header>

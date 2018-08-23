@@ -60,7 +60,7 @@ class Loginregister extends Component {
                     <UserRemixGallery/>
                     {/* <UserButtons/> */}
 
-                    <button onClick={this.logout}>{this.state.isLoggedIn}</button>
+                    <button className="submitbuttons" onClick={this.logout}>{this.state.isLoggedIn}</button>
                 </div>
             ) : (
                 <div className="user-form">
@@ -70,7 +70,7 @@ class Loginregister extends Component {
                         <form id="registerForm" onSubmit={this.register}>
                             {/* <h2>Register</h2> */}
                             <div className="form-field">
-                                <label htmlFor="registerEmail">Email:</label>
+                                <label className="registerEmail" htmlFor="registerEmail">Email:</label>
                                 <input name="registerEmail" type="text" required />
                             </div>
                             <div className="form-field">

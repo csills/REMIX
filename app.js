@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
-const fileUpload = require('express-fileupload');
 const cors = require('cors');
 
 dotenv.load();
@@ -28,25 +27,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(fileUpload());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 setupAuth(app);
-
-app.post('/upload', (req, res, next) => {
-  console.log(req);
-  let imageFile = req.files.file;
-
-  imageFile.mv(`${__dirname}/client/build/${req.body.filename}.jpg`, function(err) {
-    if (err) {
-      return res.status(500).send(err);
-    }
-
-    res.json({file: `uploads/${req.body.filename}.jpg`});
-  });
-
-})
 
 app.use('/api/remix', apiRemixRouter);
 app.use('/api/userremix', apiUserRemixRouter);
