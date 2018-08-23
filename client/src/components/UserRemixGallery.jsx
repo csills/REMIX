@@ -33,7 +33,6 @@ class UserRemixGallery extends Component {
           this.setState({ gallery: {
             Remixes: data,
         },});
-        //   console.log(data);
       })
     }
   
@@ -41,7 +40,7 @@ class UserRemixGallery extends Component {
         return  (
         <div>
             <div className="UserRemix">
-                <h1 className="UserName">My Remix History</h1>
+                <h2 className="UserName">My Remixes</h2>
             </div>
 
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
@@ -52,7 +51,6 @@ class UserRemixGallery extends Component {
                             return <div key={index} className='col-sm-6 col-md-3 col-xl-2'>
                                 <div className = 'gallery-card'>
                                     <UserRemixGalleryImages className='gallery-thumbnail' src={remix.filepath} alt={'Image number ' + (index + 1)} />
-                                    {/* Should the source for these images be changed to call from data base? */}
                                 </div>
                             </div>
                         })

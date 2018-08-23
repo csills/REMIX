@@ -85,7 +85,7 @@ class ImageRemixHistory extends Component {
         
             {/* This is where all the remixes submitted for an 
                 Indiviual Gallery Image will appear: */}
-            <h1>Checkout this Image's Remix History</h1>
+            <h2>Checkout this Image's Remix History</h2>
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
                 <div className='row'>
                     {
