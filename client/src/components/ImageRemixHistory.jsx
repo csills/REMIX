@@ -11,6 +11,7 @@ class ImageRemixHistoryImages extends Component {
         );
     }
 }
+
 //This is where a User can see all images they have Remixed
 class ImageRemixHistory extends Component {
     constructor(props) {
