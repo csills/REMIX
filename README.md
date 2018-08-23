@@ -50,11 +50,15 @@ A few of the things you can do with REMIX:
 </p>
 
 <p align="center">
-  <img alt="Index" title="Index" src="./client/src/img/userremixhistory.jpg" width="700">
+  <img alt="Index" title="Index" src="./client/src/img/myremix.jpg" width="700">
 </p>
 
 <p align="center">
   <img alt="Index" title="Index" src="./client/src/img/login.jpg" width="700">
+</p>
+
+<p align="center">
+  <img alt="Index" title="Index" src="./client/src/img/userremixhistory.jpg" width="700">
 </p>
 
 <p align="center">

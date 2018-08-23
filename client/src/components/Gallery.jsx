@@ -4,7 +4,6 @@ import axios from 'axios';
 import '../css/App.css';
 import '../css/Gallery.css';
 
-
 class GalleryImages extends Component {
 
 // Render connecting to database
