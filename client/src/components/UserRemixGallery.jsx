@@ -40,7 +40,7 @@ class UserRemixGallery extends Component {
         return  (
         <div>
             <div className="UserRemix">
-                <h2 className="UserName">My Remixes</h2>
+                <h2 className="UserName">My Remix History</h2>
             </div>
 
             <div refs='remix-gallery-container' className='container-fluid gallery-container'>
