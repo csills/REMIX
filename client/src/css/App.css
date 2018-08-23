@@ -19,6 +19,7 @@
   padding-right: 15px;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .user-form .login-form {
@@ -89,13 +90,15 @@ h2 {
 
 h1 {
   text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 label {
   text-transform: uppercase;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  /* font-weight: lighter; */
   font-size: 80%;
   text-align: right;
   margin-right: 10px;

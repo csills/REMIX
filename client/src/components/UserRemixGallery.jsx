@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
-import './UserRemixGallery.css';
+import '../css/App.css';
+import '../css/UserRemixGallery.css';
 
 class UserRemixGalleryImages extends Component {
-
     render() {
         return(
             <img className={this.props.className} src={this.props.src} alt={this.props.alt} />
         );
     }
 }
+
 //This is where a User can see all images they have Remixed
 class UserRemixGallery extends Component {
     constructor(props) {
@@ -37,8 +37,6 @@ class UserRemixGallery extends Component {
       })
     }
   
-
-
     render() {
         return  (
         <div>
@@ -67,40 +65,3 @@ class UserRemixGallery extends Component {
 }
 
 export default UserRemixGallery;
-
-
-// Original Hardcode to test User Remix Gallery functionality:
-// Array with URLs for User Remix Gallery Images
-// let imgUrls = [
-//     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-31.jpg',
-//     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-02.jpg',
-//     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-12.jpg',
-//     'https://culturehog.com/wp-content/uploads/mona-lisa-funny-pics-32.jpg',
-//     'https://culturehog.com/wp-content/uploads/best-parodies-01.jpg',
-//     'https://culturehog.com/wp-content/uploads/best-parodies-03.jpg',
-//     'https://culturehog.com/wp-content/uploads/best-parodies-04.jpg',
-//     'https://culturehog.com/wp-content/uploads/best-parodies-06.jpg'
-//   ];
-
-
-//   class UserRemixGalleryImages extends Component {
-
-
-//     logout = () => {
-//         axios({
-//             method: 'get',
-//             url: '/auth/logout'
-//         })
-//         .then(() => {
-//             this.setState({
-//                 user: null,
-//             })
-//         })
-//         .catch((res) => {
-//             console.log(res);
-//         });
-//     }
-
-
-// export default UserRemixGallery;
-

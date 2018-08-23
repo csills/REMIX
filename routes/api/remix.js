@@ -21,7 +21,7 @@ router.post('/', function(req, res, next) {
     console.log(req.user);
     models.Remixes.create({
             filepath: req.body.filepath,
-            GalleryId: req.body.GalleryId,//req.params.galleryId, (not sure how to call galleryID)
+            GalleryId: req.body.GalleryId,
             UserId: req.user
     })
     .then(remixes => {

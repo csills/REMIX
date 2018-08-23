@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
-import UserRemixGallery from '../UserRemixGallery';
-// import UserButtons from '../UserButtons';
+import UserRemixGallery from './UserRemixGallery';
 
 class Loginregister extends Component {
 
@@ -16,13 +15,10 @@ class Loginregister extends Component {
             user: [],
             signupFormVisible: false,
             isLoggedIn: '',
-            // welcomeMessage: '',
-            // userInfo: []
         };
 
         console.log(this.state)
     }
-
 
     componentDidMount() {
         axios.get(`/api/user/`)
@@ -34,8 +30,6 @@ class Loginregister extends Component {
                 this.setState({
                     user: data.user,
                     isLoggedIn: 'Logout',
-                    // welcomeMessage: 'Hello',
-                    // userInfo: data.user
                 })
                 
             } else {
@@ -54,12 +48,7 @@ class Loginregister extends Component {
         <div className="login-form">
             {this.state.user ? (
                 <div className="user" onSubmit={this.showProfile}>
-                     {/* <h1 className="hello">{this.state.welcomeMessage}{this.state.userInfo.username}</h1>
-                     <h1 className="hello">HELLO {this.state.user}</h1> */}
-                    {/* <h1 className="hello"></h1> */}
                     <UserRemixGallery/>
-                    {/* <UserButtons/> */}
-
                     <button className="submitbuttons" onClick={this.logout}>{this.state.isLoggedIn}</button>
                 </div>
             ) : (
@@ -85,7 +74,6 @@ class Loginregister extends Component {
                         </form>
                     ) : (
                         <form id="loginForm" onSubmit={this.login}>
-                            {/* <h2>Login</h2> */}
                             <div className="form-field">
                                 <label htmlFor="username">Username:</label>
                                 <input name="username" type="text" required />
@@ -103,91 +91,6 @@ class Loginregister extends Component {
         </div>
         );
     }
-
-// V_01
-// componentdidmount()
-
-    ifDisplay = (res) => {
-        axios.get(`/api/user/`)
-        .then(( {data} ) => {
-            console.log(data.user)
-            if (data.user !== null) {
-                console.log('Logout');
-                // return (<h2>'Logout'</h2>)
-                // this.setState({
-                //     isLoggedIn: 'Logout',
-                // })
-                
-            } else {
-                console.log('Login');
-                // return  (<h2>'Login'</h2>)
-                // this.setState({
-                //     isLoggedIn: 'Login',
-                // }) 
-            }
-        })
-    }
-
-// ===========================================================
-// V_02
-
-    // logoutButton = (event) => {
-    //     this.setState({
-    //         isLoggedIn: true
-    //     })
-    // }
-
-    // loginButton = (event) => {
-    //     this.setState({
-    //         isLoggedIn: false
-    //     })
-    // }
-
-    // ifLoggedin = (event) => {
-    //     event.preventDefault();
-    //     axios({
-    //         method: 'get',
-    //         url: '/api/user',
-    //         data: {
-    //             user: this.user.username
-    //         }
-    //     })
-    //     .then(({data}) => {
-    //         this.logoutButton();
-    //     })
-    //     .catch((res) => {
-    //         console.log(res)
-    //     })
-    // }
-
-// ===========================================================
-// V_03
-
-    // ifDisplay = (res) => {
-    //     axios.get(`/api/user/`)
-    //     .then(( {data} ) => {
-    //         console.log(data.user)
-            
-    //     })
-    // }
-
-// ===========================================================     
-// V_04
-
-
-    // ifDisplay = (res) => {
-    //     const loggedUserId = this.state.user.id;
-    //     console.log(loggedUserId);
-    //     // once user logs in, log out button remain until the user clicks log out
-    //     if (isNaN(loggedUserId)) {
-    //         return (
-    //             'Login'
-    //         );
-    //     }
-    //     return (
-    //         'Logout'
-    //     );
-    // }
 
     showLoginForm = (event) => {
         this.setState({
@@ -218,7 +121,6 @@ class Loginregister extends Component {
             })
             .catch((res) => {
                 console.log(res);
-                // Is there where alert box would go for failed registration?
                 swal("Registration Failed", "...please try again!");
             });
     }
@@ -243,7 +145,6 @@ class Loginregister extends Component {
         })
         .catch((res) => {
             console.log(res);
-            // Is there where alert box would go for failed login?
             swal("Incorrect Login", "...please try again!");
         });
     }

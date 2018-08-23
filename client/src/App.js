@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import './App.css';
+import './css/App.css';
 import remixLogo from './img/Remix-Logo.jpg';
-import Gallery from './Gallery';
-//import UserRemixGallery from './UserRemixGallery';
-import ImageRemixHistory from './ImageRemixHistory';
-import Loginregisterpage from './Loginregisterpage';
-import About from './About';
-//import Uploadbutton from './Uploadbutton';
+import Gallery from './components/Gallery';
+import ImageRemixHistory from './components/ImageRemixHistory';
+import Loginregisterpage from './components/Loginregisterpage';
+import About from './components/About';
 
 class App extends Component {
 
@@ -20,7 +18,7 @@ class App extends Component {
           <div className="navbar">
               <Link to="/Gallery">Gallery</Link>
               {/* <Link to="/UserRemixGallery">Remixes</Link> */}
-              <Link to="/Loginregisterpage">Login</Link>
+              <Link to="/Loginregisterpage">My Remix</Link>
               <Link to="/About">About</Link>
           </div>
         </header>
